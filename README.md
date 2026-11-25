@@ -13,8 +13,6 @@ license: mit
 
 A chatbot that answers questions about GitLab's people policies from 48 pages of the public [GitLab Handbook](https://handbook.gitlab.com/handbook/), **cites the exact section** behind every claim, and **says "I don't know" when the handbook doesn't cover the question**. It's tested on a 51-question set written before any tuning, with every verdict checked by hand.
 
-**Live demo:** _link added after deploying to Hugging Face Spaces_
-
 [**Watch the 50-second demo (MP4)**](demo/rag-chatbot-demo.mp4): a real answer with numbered citations, a pulled source card with the supporting sentence highlighted, a refusal for an out-of-scope question, and the published eval results. Every screen is from a real run.
 
 ## Results
