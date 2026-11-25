@@ -1,0 +1,1309 @@
+{
+ "answer_model": "openai/gpt-oss-120b",
+ "judge_model": "qwen/qwen3.8-27b",
+ "headline": {
+  "answerable": 39,
+  "unanswerable": 12,
+  "correct": 32,
+  "declined": 12
+ },
+ "runs": [
+  {
+   "mode": "baseline",
+   "name": "Baseline: embeddings only + plain prompt",
+   "metrics": {
+    "Answer accuracy (correct)": "82% (32/39)",
+    "Correct + partial": "95% (37/39)",
+    "Citation accuracy": "95% (37/39)",
+    "Retrieval recall@6": "95% (37/39)",
+    "False refusals (answerable)": "0% (0/39)",
+    "Correct \"I don't know\" (unanswerable)": "92% (11/12)"
+   },
+   "overridden": 2,
+   "rows": [
+    {
+     "id": "A01",
+     "question": "How much notice should I give my manager before taking PTO?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the requirement of at least twice as many days' notice as the planned time off, includes the specific example from the reference, and mentions providing as much notice as possible, all of which are supported by the cited passages.",
+     "answer": "You should give your manager **at least twice the number of days you plan to be away** as advance notice. For example, a 3‑day PTO request should be submitted at least 6 business days before the start date. GitLab’s policy also asks you to discuss the planned time off with your manager as early as possible and provide as much notice as you can [1][3].",
+     "gold": "At least twice as many days as the planned time off (for example, 6 business days' notice for 3 days off), and as much notice as possible.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-away-philosophy",
+      "people-group/time-off-and-absence/time-off-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A02",
+     "question": "Is there a limit on how much PTO I can take?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that there is no set yearly limit and accurately identifies the requirement for special permission for absences longer than 25 consecutive days, matching the reference answer and supported by the cited passages.",
+     "answer": "GitLab’s Flexible PTO policy does **not** impose a fixed annual cap on the amount of paid time off you can use. Team members are free to take as much PTO as they need, provided they:\n\n* Coordinate the request with their manager and have a coverage plan in place (the “flexible” nature of the policy) [1] [2]  \n* Give advance notice of at least twice the number of days they plan to be away (e.g., 6 business‑day notice for a 3‑day request) [2] [4]  \n\nThe only additional restriction is for **extended consecutive absences**: if you need more than 25 consecutive calendar days (including weekends and holidays), you must obtain special permission from your manager, People Business Partner, and the Absence Management Team [1].\n\nSo, there is no set yearly limit, but you must follow the coordination, notice, and approval steps outlined above, and seek extra approval for any stretch of PTO longer than 25 consecutive days.",
+     "gold": "There is no set yearly limit, but time off longer than 25 consecutive calendar days needs special permission from your manager, People Business Partner and the Absence Management team.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-off-types",
+      "total-rewards/benefits/general-and-entity-benefits/canada-corp-benefits"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A03",
+     "question": "What happens if I'm off sick for more than 6 consecutive days?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that sick absences of 6+ days become a leave of absence and accurately details the specific procedures for the US (Tilt) and other locations (Compass ticket and Workday entry) as stated in the reference and cited passages.",
+     "answer": "If you are sick for **six days or more**, GitLab treats the absence as a **leave of absence** rather than a regular short‑term sick‑day request.\n\n### What you need to do  \n\n| Region | Steps to follow |\n|--------|-----------------|\n| **USA** | Submit a **Leave request in Tilt** (accessed through Okta). After you submit, the system will build a personalized leave plan (you’ll be notified when it’s ready)[1]. |\n| **All other locations** | 1. **Notify the Absence Management Team** by opening a **Compass ticket** – they will explain the sick‑time policy, check any statutory benefits you may qualify for, and guide you on next steps[1].<br>2. **Enter the time away in Workday** using the label **“Out Sick.”** (The Absence Management team may edit or replace the entry on your behalf)[1].<br>3. **Provide required documentation** (medical certificate, doctor’s note, fit note, etc., depending on local law)[1]. |\n\n### Pay while you’re on this leave  \n\n* You will receive **100 % of your weekly wages** for up to **25 working days** (≈5 weeks) through GitLab’s Sick Time policy, plus any statutory sick‑pay you’re eligible for. GitLab will supplement statutory pay to bring you up to 100 % but will not pay more than that[6].  \n* If the leave extends beyond 25 working days, the additional time is **unpaid** (subject to local requirements)[6].\n\n### Other impacts  \n\n* **Equity vesting** is paused after **six months of continuous leave** and resumes on your first day back at work. This pause follows local laws and may not apply everywhere[2].  \n* If you are in a sales role, commission and quota considerations are handled by the Sales Incentives policies; you can raise any specific questions via a Compass ticket to the sales commission team[6].\n\n### Summary  \n\n- **6+ consecutive sick days → leave of absence**.  \n- **USA:** Submit in Tilt; **Other locations:** Open a Compass ticket, log “Out Sick” in Workday, and provide required medical documentation.  \n- **Pay:** Up to 25 working days at 100 % of wages (supplemented statutory pay if applicable); beyond that, unpaid.  \n- **Equity vesting** may pause after six months of continuous leave.  \n\nIf you need help with any of these steps or have questions about your specific situation, open a Compass ticket with the appropriate team (Absence Management, Stock Admin, or Sales Commission).",
+     "gold": "It becomes a leave of absence. In the US you submit a leave request in Tilt; elsewhere you notify the Absence Management team with a Compass ticket and record the time as \"Out Sick\" in Workday.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types",
+      "people-group/time-off-and-absence/time-off-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A04",
+     "question": "How many days of jury duty does GitLab pay for?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the 25 working days limit and 100% pay rate from the reference, and the additional detail about the first 10 days is supported by the cited handbook passage [2].",
+     "answer": "GitLab’s policy is to cover jury‑duty leave with full pay, but the amount of time that is paid is limited.\n\n* **Full‑pay coverage:**  Eligible team members receive 100 % of their weekly wages for jury‑duty leave **until the absence reaches 25 working days**. If the service lasts longer, the case is reviewed individually [1].\n\n* **Make‑up pay for the first 10 days:**  In addition, GitLab “makes up” any shortfall so that the employee receives 100 % of their regular salary for the **first 10 days** of jury selection or duty [2].\n\nSo, GitLab pays for jury‑duty leave up to **25 working days**, with a specific “make‑up‑pay” guarantee for the **first 10 days** of service.",
+     "gold": "Up to the equivalent of 25 full working days, paid at the usual rate (100% of weekly wages); longer absences are reviewed case by case.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-off-types",
+      "total-rewards/benefits/general-and-entity-benefits/pty-benefits-australia"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A05",
+     "question": "How long is GitLab's parental leave, and by when do I have to use it?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the 16-week duration and the deadline (before the child's first birthday or first anniversary of adoption/foster placement/surrogacy birth), which matches the reference answer and is supported by the cited passages.",
+     "answer": "GitLab provides **16 weeks of paid Parental Leave** to any active team member who becomes a parent (through birth, adoption, fostering, or surrogacy) [2][3].  \n\nThe leave must be taken **before the child’s first birthday (or the first anniversary of the adoption, foster placement, or surrogacy birth)** [2][3].  \n\nSo you have 16 weeks of paid leave, and you need to use it within the first year of your child’s life (or the corresponding anniversary for other types of parenthood).",
+     "gold": "16 weeks of paid parental leave, to be used before the child's first birthday (or the first anniversary of the adoption, foster placement or surrogacy birth).",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A06",
+     "question": "Can I come back from parental leave at reduced hours?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the 50% capacity option, the 2-4 week guideline, the requirement to agree with a manager, and the fact that it is not tracked in Workday, all of which are supported by the cited passages.",
+     "answer": "Yes. GitLab lets you ease back into work after parental leave by returning at a reduced schedule.\n\n* **50 %‑capacity option** – You can come back at roughly half‑time (or any other reduced‑hours arrangement that works for you) for a short transition period, typically 2‑4 weeks. The exact pattern is flexible – you might work fewer days per week, shorter days, or gradually increase the number of days as you get settled. This benefit does **not** need Workday approval and isn’t tracked by the Absence Management team; you just need to agree on the plan with your manager [2].\n\n* **Company‑wide parental‑leave policy** also mentions the same 50 %‑capacity option for 2‑4 weeks and encourages you to discuss it with your manager and use the Parentaly support resources for coaching and planning [5].\n\n**How to use it**\n\n1. **Talk to your manager** – Bring up the reduced‑hours plan before you leave or a few weeks before you intend to return.  \n2. **Agree on a schedule** – Decide on the number of days or hours per week, or a ramp‑up plan (e.g., 2 days the first week, 3 days the second, etc.).  \n3. **No Workday entry required** – Because the program isn’t tracked in Workday, you don’t need formal approval from Absence Management; just keep your manager in the loop.\n\nSo, you can definitely return from parental leave at reduced hours, using the 50 %‑capacity transition that GitLab provides.",
+     "gold": "Yes, you can return at 50% capacity, agreed with your manager; the guideline is two to four weeks and it is not tracked in Workday.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types",
+      "total-rewards/benefits/general-and-entity-benefits"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A07",
+     "question": "How long do reinstatement rights last after military service?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that reinstatement rights last up to 2 years after military service ends, which matches the reference answer and is supported by the cited handbook passage.",
+     "answer": "GitLab guarantees that a team member who is off‑boarded during military service has the right to be reinstated for **up to two years after the service ends** (the same two‑year period also applies to team members with disabilities for recuperation and convalescence)[1].",
+     "gold": "Up to 2 years after the military service ends.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A08",
+     "question": "How far in advance should I book flights for business travel?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the 14-day domestic and 21-day international booking windows as per the reference and cited passages, and accurately includes supporting details about Navan usage and policy flags.",
+     "answer": "For business travel you should aim to book your flights as early as possible so you can capture the discounted “fair‑market” fares that Navan’s dynamic pricing calculates.\n\n**Guidelines**\n\n| Type of trip | Minimum advance booking |\n|--------------|------------------------|\n| **Domestic** | At least 14 days before departure |\n| **International** | At least 21 days before departure |\n\nThese time‑frames are the company’s recommended windows for securing the best rates and staying within the Navan policy (any fare that is more than 20 % above the dynamic price will be flagged for manager review)[2].  \n\nAll business‑related flights should be booked through Navan (the company travel platform) to ensure compliance with the policy and to take advantage of the negotiated rates[6].",
+     "gold": "Ideally at least 14 days ahead for domestic flights and 21 days ahead for international flights.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A09",
+     "question": "Can I book business class for a long domestic flight?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that business class cannot be booked for domestic flights and accurately cites the policy allowing only one class upgrade below business for flights over 5 hours, which aligns with the reference and cited passages.",
+     "answer": "No. For domestic travel the policy only allows you to move **one class up from standard economy** on long‑haul flights (those > 5 hours of consecutive flight time), and that upgrade must stay **below business class**. Business‑class seats are only permitted on certain international itineraries (e.g., frequent travelers on 8‑hour+ flights for specific reasons) and are not allowed for domestic flights. [1]",
+     "gold": "No. For domestic flights where each segment is over 5 hours you may book the next class up from standard economy, but it must be below business class.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A10",
+     "question": "What is the daily meal limit when I travel for work?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the $120 USD daily limit and includes supported details about receipts and descriptions from the cited passage.",
+     "answer": "When you’re traveling on company business, GitLab reimburses meals up to **$120 USD (or the local‑currency equivalent) per day**. This daily cap applies to the total of all meals you incur while on a work‑related trip — you’ll still need to submit receipts (or use the per‑diem rates where applicable) and include a description of the travel purpose. [5]",
+     "gold": "Up to $120 USD (or local equivalent) per day.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A11",
+     "question": "How much can I expense for internet access while traveling?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the reimbursement limit of $50 USD per day and includes the required procedural details (trip details in description, correct expense category) supported by the cited passage.",
+     "answer": "When you’re on a business trip you can be reimbursed for the cost of internet access up to **$50 USD (or the local‑currency equivalent) per day**. When you submit the expense, be sure to include the trip details in the description box and select the “Traveling: internet access” expense type [1].",
+     "gold": "Up to $50 USD (or local equivalent) per day.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A12",
+     "question": "Can I expense a coworking space, and what is the limit?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that coworking spaces are reimbursable with pre-approval, states the $700 monthly limit, and accurately describes the 50km distance requirement and the exception for business travel day passes, all of which are supported by the cited handbook passages.",
+     "answer": "Yes – GitLab will reimburse you for a co‑working space, but only under the rules laid out in the **Global Travel and Expense Policy**.\n\n### Monthly co‑working space  \n* **What can be claimed:** The rent for a professionally‑managed co‑working facility (no apartments, gyms, hotels, cafés, etc.).  \n* **Limit:** **$700 per month** (per Team Member).  \n* **Other conditions:**  \n  * Must be within ~50 km of your primary residence (unless it’s a one‑off day while you’re traveling for business).  \n  * No contracts in GitLab’s name; the lease must be in your name.  \n  * You must submit the expense in the month it applies, with a full receipt and a copy of the pre‑approval email (if required).  \n  * If you book **more than 5 days** in a month, you need Manager + Finance approval before you submit the claim.  \n  * Only the rent is reimbursable – travel, parking, meals, insurance, access cards, etc., are not covered.  \n\n(See [1] and the expense‑type mapping in [4]).\n\n### Daily (one‑off) office pass  \n* **What can be claimed:** Up to 5 one‑off day passes in a calendar month (no manager/finance approval needed for those 5).  \n* **Limit:** **$100 per day**.  \n* **All other rules** (facility type, receipt, pre‑approval, etc.) are the same as the monthly policy.  \n\n(See [2]).\n\n### Bottom line  \n*You can expense a co‑working space.*  \n* Monthly rentals are capped at **$700 per month**.  \n* One‑off daily passes are capped at **$100 per day**, up to 5 days per month without extra approval.  \n\nRemember to obtain the required pre‑approval, keep the receipt, and submit the claim in the month the expense was incurred.",
+     "gold": "Yes, with pre-approval, up to $700 per month; it must be a professionally managed coworking space within commuting distance (about 50 km) of your primary residence, except day passes during business travel.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A13",
+     "question": "How much can I spend on business cards?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately states the $150 per quarter limit, the requirement for manager approval via email for higher amounts, and correctly identifies the expense category as Office Supplies, all of which are supported by the cited passage.",
+     "answer": "You can spend up to **$150 per quarter** on business cards. If you need to exceed that amount, you must get your manager’s approval (via email) and attach that approval to the expense transaction as an additional receipt. The expense is classified under the “Office Supplies” category. [1]",
+     "gold": "Up to $150 per quarter, ordered through Moo; more than that needs your manager's approval by email.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A14",
+     "question": "Can I expense my monthly mobile phone bill?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that monthly service charges are reimbursable only if the phone is vital to the position and that hardware/accessories are not, while accurately including the $100 limit and other conditions supported by the cited passage.",
+     "answer": "Yes – GitLab will reimburse the **monthly service charge for a cell‑phone** (the “Phone Service” expense type) **provided the phone is essential to your role**.\n\n**What you can claim**\n\n* The monthly service fee (not the device, accessories, or hardware).  \n* Only the employee’s portion of a family plan.  \n* Up to **$100 per month** – any amount above that will not be reimbursed.  \n* An **itemized receipt** is required. If you receive a bundled bill (e.g., TV + Internet + Phone), you must split the total and claim only the phone portion.  \n* If you use the phone abroad, you should have a contract that includes roaming services.  \n\n**What you cannot claim**\n\n* The cost of the phone itself, accessories, tablets, watches, or any other hardware.  \n* Any setup, change‑fee, or insurance charges.  \n\nSo, as long as you meet the above conditions (vital phone, itemized receipt, ≤ $100, employee‑only portion of a family plan), you can expense your monthly mobile phone bill.  \n\n*Source: Global Travel and Expense Policy – Approved Office Supplies List – Phone Service*[1].",
+     "gold": "Monthly cell phone service charges are reimbursable only for team members whose phones are vital to their position; the phone itself, accessories and hardware costs are not reimbursable.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A15",
+     "question": "When should I submit my final expenses before leaving GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The answer correctly states the one-week deadline and the specific methods for employees (Navan) and contractors (final invoice), which aligns perfectly with the reference and cited passages.",
+     "answer": "You should file your last expense report **at least one week before your departure date** so that it can be processed and reimbursed in a timely manner. For employees this means creating the final expense report in Navan (or, for contractors, attaching the expenses to your final invoice) and getting it submitted at least seven days prior to your last day [1][4].",
+     "gold": "At least one week before your departure date, as a final expense report in Navan (employees) or with the final invoice (contractors).",
+     "cited_pages": [
+      "people-group/offboarding",
+      "people-group/offboarding/faq"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A16",
+     "question": "When does my US medical coverage end after I leave GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that US medical, dental, and vision coverage ends at the end of the month of departure, while other benefits end on the last day, which aligns with the reference and cited passages.",
+     "answer": "In the United States your health‑benefit coverage does **not** stop the day you give notice – it continues through the end of the month in which your employment ends.\n\n* **Medical, dental and vision** – coverage ends on the **last day of the month** of your departure (e.g., if your last working day is April 12, your coverage runs through April 30).  \n* **All other benefits** (e.g., PTO, retirement) end on your actual last day of employment.  \n\nAfter your coverage ends you are eligible for COBRA continuation (up to 18 months) and can enroll within 60 days of receiving the COBRA packet, with the coverage date back‑dated to the first day you are without coverage[1][2].",
+     "gold": "US medical, dental and vision coverage ends at the end of the month you leave; other benefits end on your last day.",
+     "cited_pages": [
+      "people-group/offboarding/faq"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A17",
+     "question": "I lost my work laptop. What should I do?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "(human review) Main step right (email panic@gitlab.com). The extra IT steps are true elsewhere in the handbook but are cited to a passage that doesn't contain them.",
+     "answer": "If you discover that your GitLab‑issued laptop is missing, you should act immediately:\n\n1. **Notify Security right away** – Send an email to **panic@gitlab.com** as soon as you realize the device is lost or stolen. This triggers the “Lost or Stolen” response workflow that the Production and Security teams monitor [5].\n\n2. **Provide any required documentation** – GitLab may ask you for proof of the loss (e.g., a police report or other documentation). Be prepared to supply that if requested [5].\n\n3. **Request a temporary replacement** – Because you no longer have a company laptop, you’ll need a short‑term solution to continue working. Open a **Policy Exception Request** so you can use a non‑company device while the issue is resolved. The exception is only temporary and the device must meet the basic security standards outlined in the BYOD policy; a Windows machine is still prohibited [6].\n\n4. **Coordinate with IT for a new laptop** – Once the loss is reported, IT will start the process of provisioning a replacement laptop. You can reach IT through the Compass app in Slack or via it‑help@gitlab.com, and they will guide you on the next steps (e.g., shipping a new device, expense handling, etc.) [5].\n\n5. **Do not attempt to wipe the missing laptop yourself** – Laptop wipes must be performed by an IT Ops team member, and in a loss scenario you won’t have access to the device. The security team will handle any necessary remote wipe or de‑provisioning once the incident is logged [5].\n\nIn short: **email panic@gitlab.com immediately, be ready to provide a police report if asked, open a Policy Exception Request for a temporary device, and work with IT (via Compass or it‑help@gitlab.com) to get a replacement laptop.** [5][6]",
+     "gold": "Email panic@gitlab.com right away so the security and production teams can respond immediately.",
+     "cited_pages": [
+      "people-group/acceptable-use-policy"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A18",
+     "question": "Can I read work email on my personal phone?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that personal phones can access work email if passcode-enabled and 2FA is enforced, and it accurately notes that RED data is prohibited (implied by the strict adherence to BYOD rules which exclude RED data as per the cited text, though the chatbot focuses on the positive requirements which are the main point of the reference). The cited passages support all claims made.",
+     "answer": "Yes – you may read GitLab work email on a personal phone, but only if the device meets the BYOD security requirements.\n\nGitLab’s **Bring‑Your‑Own‑Device (BYOD)** policy treats personal mobile phones and tablets as an exception to the general rule that non‑company devices cannot access company assets. To use a personal device for email (or any GitLab‑managed data) you must:\n\n* Enable a passcode on the device.  \n* Use the 2‑factor authentication that the Security team enforces for all GitLab.com and Google Workspace accounts.  \n* Keep the device’s operating system up‑to‑date with the latest patches (or at least the latest version available).  \n\nIf you’re unsure whether your phone meets these standards, you can ask the Security Team for assistance.  \n\n**Reference:** GitLab Internal Acceptable Use Policy – BYOD (personal mobile phone and tablet usage) [1].",
+     "gold": "Personal phones and tablets may access GitLab-managed data such as email if they are passcode-enabled, with 2FA enforced; non-company devices are otherwise not permitted, and RED data is always prohibited.",
+     "cited_pages": [
+      "people-group/acceptable-use-policy"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A19",
+     "question": "How long is the probation period at GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately states the 1-9 month range, the location dependency, and the exemption for relocated employees with continuous service, matching all key facts in the reference and supported by the cited passage.",
+     "answer": "GitLab’s probationary period isn’t a single fixed length – it varies by country (and sometimes by contract). When a new team member starts, the probation period can be anywhere **from 1 month up to 9 months**, with the typical practice being to set the period at the maximum length allowed under local law for that location [1].  \n\nIf you later relocate or change contracts but have already completed the probation period for your original location (and your service with GitLab has been uninterrupted), you won’t have to serve a new probation period for the new location or contract [1].",
+     "gold": "It depends on location, between 1 and 9 months; team members who relocate with continuous service and have already passed probation don't repeat it.",
+     "cited_pages": [
+      "people-group/contracts-probation-periods"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A20",
+     "question": "Do I need approval before starting a side project?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that approval is required, specifies the written disclosure process to the manager, and accurately states the grounds for refusal (conflict of interest or impact on job performance) as supported by the cited passages.",
+     "answer": "Yes. GitLab requires that any “outside activity” – including a side‑project, whether paid or unpaid – be disclosed in writing and approved before you begin work on it.\n\n**What the handbook says**\n\n* **Current team members** must first check their individual employment contract to confirm there is no clause that bars the activity, then send an email request to their direct manager (copying Team Member Relations) that includes the project name, goal, any GitLab clients or team members involved, estimated weekly time commitment and the member’s role in the project. The manager, Team Member Relations, and the appropriate director‑level leader must review and approve the request before the work can start[4].  \n\n* The same principle applies to candidates in the hiring process: they must disclose any outside employment or side projects on a form that the recruiter forwards to the hiring manager and Team Member Relations for review and approval before the candidate can be hired[2].\n\n* Approval will be denied if the activity creates a conflict of interest under the Code of Business Conduct & Ethics or would interfere with the employee’s ability to perform their GitLab duties[1].\n\n**Bottom line:** You must obtain written approval (via the manager‑and‑Team Member Relations review process) before you start a side project. Starting it without that approval would be a policy violation.",
+     "gold": "Yes. You must disclose outside activities (paid or unpaid) in writing to your manager before starting; approval is refused if it is a conflict of interest or would affect your ability to do your job.",
+     "cited_pages": [
+      "people-group/contracts-probation-periods"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A21",
+     "question": "What anniversary gift do I get after five years at GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the five-year anniversary gift as a GitLab-branded computer backpack and accurately includes the detail that no action is required, both of which are supported by the cited passage.",
+     "answer": "After five years at GitLab you’re eligible for a **GitLab‑branded computer backpack** as your anniversary gift. The vendor team (Brilliant) will email you a redemption link on the day of your anniversary—no action is required on your part to receive it[1].",
+     "gold": "The option of a GitLab-branded computer backpack.",
+     "cited_pages": [
+      "people-group/celebrations"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A22",
+     "question": "How much does GitLab match on the US 401(k)?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly states the match percentage and cap but omits the key details of immediate eligibility and vesting mentioned in the reference.",
+     "answer": "GitLab’s U.S. 401(k) includes a company match of **50 % of the employee’s contributions on the first 6 % of earnings**, with the match capped at **$1,500 per year**[1].",
+     "gold": "50% of contributions on the first 6% of earnings, up to $1,500 a year, with immediate eligibility and vesting.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/inc-benefits-us"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A23",
+     "question": "I'm in the US and already have medical coverage through my spouse. Can I opt out of GitLab's medical plan?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that the user can opt out, specifies the $150 monthly allowance, mentions the requirement to actively waive in PlanSource, and notes that other benefits like dental and vision remain available, all of which align with the reference and cited passages.",
+     "answer": "Yes. If you already have group medical coverage (for example, through a spouse’s plan), you may waive GitLab’s medical insurance and receive a monthly “medical‑waiver” allowance instead.  \n\n* GitLab’s benefits guide states that anyone with existing coverage can opt out and be paid a **$150 per month** allowance while still being able to enroll in dental, vision and other benefits [6].  \n* The same information appears in the general medical‑coverage section, which notes that you can choose to “opt out and receive a monthly allowance” if you have coverage elsewhere [1].\n\nTo receive the allowance you must actively waive the medical plan in PlanSource during your election period (or you’ll be auto‑enrolled in the waiver allowance if you don’t select a plan). Once waived, you’ll continue to receive the $150 monthly benefit for the duration of your employment.",
+     "gold": "Yes. If you actively waive medical coverage in PlanSource you receive a $150 monthly allowance and can still enroll in dental, vision and other benefits.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/inc-benefits-us"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A24",
+     "question": "Who is automatically enrolled in the UK pension scheme?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately identifies the three specific criteria (earnings, age, state pension age) for automatic enrollment and correctly names the pension plan, matching the reference answer and supported by the cited handbook passage.",
+     "answer": "GitLab automatically enrols any UK‑based team member who meets the statutory auto‑enrolment criteria:\n\n* **Earns > £10,000 a year**  \n* **Is 22 years of age or older**  \n* **Is under the State Pension age**\n\nIf an employee satisfies all three of those conditions they are placed into the Group Personal Pension Plan with Scottish Widows without having to take any action. Those who earn less than the threshold are classified as “Entitled Workers” or “Non‑Eligible Jobholders” and are only offered the option to join, not automatically enrolled [1].",
+     "gold": "Team members who earn over £10,000 a year, are aged 22 or over and are under State Pension Age are automatically enrolled in the Scottish Widows Group Personal Pension Plan.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/ltd-benefits-uk"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A25",
+     "question": "Do team members in Belgium get meal vouchers?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly confirms that Belgium-based team members receive meal vouchers, accurately states the effective date context (implied by the current policy description), and correctly explains the proration based on worked days in the previous month, supported by the cited passage.",
+     "answer": "Yes. All GitLab team members based in Belgium are entitled to tax‑advantaged meal vouchers. The benefit is provided via an electronic Pluxee meal card, with €8.00 credited for each worked day (the employer contributes €6.91 and the employee €1.09). Vouchers are prorated for part‑time staff and are loaded each month for the previous month’s worked days. [1]",
+     "gold": "Yes, since 2026-03-01 all Belgium-based team members get meal vouchers, prorated by the days worked in the previous month.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/bv-benefits-belgium"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A26",
+     "question": "How much does GitLab contribute to KiwiSaver in New Zealand?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly states the contribution rate and that it is paid on top of salary, but it omits the important details regarding automatic enrollment and the 56-day opt-out period mentioned in the reference.",
+     "answer": "GitLab contributes **3 % of your base salary** to your KiwiSaver account (paid on top of your salary)[1].",
+     "gold": "3% of base salary, paid on top of salary; team members are enrolled automatically and can opt out within the first 56 days.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/pty-benefits-new-zealand"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A27",
+     "question": "How many Modern Health therapy sessions do I get, and can my family use it?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The answer correctly states the 6 therapy sessions per year and accurately details family eligibility (spouse/partner and children up to age 27), supported by the cited passages.",
+     "answer": "You’re entitled to **six (6) complimentary therapy sessions per year** through Modern Health — the same number of coaching sessions you receive [2].\n\nFamily members are covered, too:\n\n* **Spouse/partner and children (up to age 27)** are eligible for the same benefit. Adult dependents (18 +) receive their own allotment of 6 therapy sessions (and 6 coaching sessions) [1].  \n* **Minor children** can also access therapy services, but the appointment must be coordinated with a parent or guardian [1].  \n* Sessions can be **shared with family members**, although any shared session counts against your personal annual total [4].\n\nSo you get six therapy sessions each year, and your eligible family members can use the benefit—either through their own allocation (adults) or by sharing your sessions (children/minors).",
+     "gold": "6 free therapy sessions and 6 free coaching sessions per year; eligible family members include a spouse or partner and children (and partner's children) up to age 27.",
+     "cited_pages": [
+      "total-rewards/benefits/modern-health"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A28",
+     "question": "How much is the referral bonus, and when is it paid?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the standard $1,500 bonus and the 3-month payment timing as per the reference, and accurately includes the specific Account Executive incentives and processing details supported by the cited handbook passages.",
+     "answer": "**Referral‑bonus amount**\n\n* **Standard bonus** – GitLab pays a flat **$1,500** for a new hire who is not an Account‑Executive role [1].  \n* **Limited‑time Account‑Executive (AE) incentive** – From **December 8 2025 through February 23 2026** the bonus is increased to:  \n  * **$7,000** for Commercial or New‑Business AE hires, and  \n  * **$10,000** for Strategic or Major AE hires [2].  \n  * If the hire date is **before 2025‑12‑07**, the regular $1,500 amount applies [2].\n\n**When the bonus is paid**\n\n* The bonus is earned **once the referred new team member has completed three months of employment** [1].  \n* After the 3‑month mark, the **People Operations team processes referral bonuses weekly** from the “GitLab Referral Bonus Audit” Workday report. They add a one‑time payment to Workday once all qualifications are confirmed, then notify Payroll to actually issue the payment [3].\n\nSo, in most cases you’ll receive **$1,500** (or the higher AE amount during the specified Q4 window) **after the new hire’s 3‑month anniversary, with the payout handled in the next weekly processing cycle by People Ops and then payroll**.",
+     "gold": "A flat $1,500 for a new hire, paid once the new team member has been employed for 3 months.",
+     "cited_pages": [
+      "total-rewards/incentives"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A29",
+     "question": "How long do I have to exercise my vested stock options after leaving GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the 90-day (three-month) window for exercising vested options after termination, which aligns with the reference answer and is supported by the cited handbook passages.",
+     "answer": "When your employment ends, GitLab gives you a limited period to exercise any options that have already vested. You have **90 days (approximately three months) after your termination date** to exercise those vested options, after which they will be forfeited [3][4].",
+     "gold": "Three months; vested options not exercised in that window are lost.",
+     "cited_pages": [
+      "total-rewards/stock-options"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A30",
+     "question": "When are ESPP shares purchased?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly identifies the purchase dates (May 31 and November 30) but omits the specific detail from the reference that only whole shares are purchased.",
+     "answer": "GitLab’s ESPP purchases shares on the **scheduled Purchase Dates at the end of each Purchase Period**. The plan runs two purchase periods per year, so the purchases are normally made on **May 31 and November 30** (the “May and November” purchase dates) [2][1].",
+     "gold": "On the purchase date at the end of each purchase period, normally May 31 and November 30; only whole shares are bought.",
+     "cited_pages": [
+      "total-rewards/stock-options"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A31",
+     "question": "Does GitLab sponsor US H-1B visas?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that GitLab does not sponsor US H-1B visas, which aligns with the reference answer and is supported by the cited handbook passages listing H-1B as a non-sponsored visa.",
+     "answer": "No. GitLab does **not** sponsor U.S. H‑1B visas. The company’s Visa and Sponsorship Policy explicitly lists the U.S. H‑1B (along with many other work permits) among the visas it does not sponsor [3]. In addition, the general work‑authorization guidelines state that GitLab does not support any visa that requires sponsorship [2].",
+     "gold": "No. The US H-1B (and H-1B1) is on the list of visas GitLab does not sponsor.",
+     "cited_pages": [
+      "people-group/visas"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A32",
+     "question": "How is compa-ratio calculated?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the formula (salary divided by midpoint) and provides the exact example from the reference, fully supported by the cited passage.",
+     "answer": "The compa‑ratio is a simple ratio that shows how a team member’s pay compares to the midpoint of the market‑aligned salary range for their role.\n\n**Formula**\n\n\\[\n\\text{Compa‑ratio} = \\frac{\\text{Team member’s salary (or TTC)}}{\\text{Midpoint of the compensation range}}\n\\]\n\n**Example**\n\n* If a team member earns **$90,000** and the midpoint for their role is **$100,000**, the compa‑ratio is 0.90.  \n* If the salary is **$110,000** with the same $100,000 midpoint, the compa‑ratio is 1.10.\n\nThis calculation lets GitLab see whether a person is below, at, or above the targeted market position for their role. [1]",
+     "gold": "Salary divided by the midpoint of the compensation range; for example $90,000 with a $100,000 midpoint is 0.90.",
+     "cited_pages": [
+      "total-rewards/compensation"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A33",
+     "question": "What does GitLab give new parents besides leave?",
+     "answerable": true,
+     "verdict": "incorrect",
+     "reason": "The chatbot fails to mention the specific 'new parent swag bundle' (teething ring, socks, etc.) which is the core fact in the reference answer, instead listing unrelated benefits like pay protection and risk assessments.",
+     "answer": "GitLab’s “new‑parent” package goes beyond the 16 weeks of paid Parental Leave and includes a handful of non‑time‑off benefits that are meant to protect income, give flexibility and help the team member transition back to work:\n\n| What it is | How GitLab provides it | Source |\n|------------|-----------------------|--------|\n| **Full‑salary pay protection** – the 16 weeks of Parental Leave are paid at 100 % of the employee’s regular salary (instead of the statutory SMP rate). | GitLab’s enhanced policy tops up the statutory amount so that eligible parents receive up to 16 weeks at 100 % salary. | [3] |\n| **Supplemental insurance/pay‑continuation** – for locations where statutory benefits are lower, GitLab “supplements insurance payments to ensure full salary continuation.” | In Korea the policy explicitly states that GitLab supplements insurance payments so the employee’s salary is fully protected. | [4] |\n| **Public‑holiday balance** – each team member gets a personal public‑holiday bank that can be used flexibly during the year, even while on Parental Leave. | The Public Holiday policy gives a balance that must be used within the calendar year and does not roll over unless required by law. | [5] |\n| **Family & Friends Days** – if any of the four scheduled “Family and Friends Days” fall inside the Parental Leave period, the leave is automatically extended by four days. | GitLab adds four extra days to the leave when those days coincide with the parental‑leave window. | [5] |\n| **Coverage‑planning support** – managers and the Absence Management team work with the employee to create a coverage plan and can provide career‑transition assistance. | The handbook expects parents to develop a coverage plan with their manager and offers additional career‑transition support if needed. | [5] |\n| **Risk‑assessment & safety check** – before the leave starts, the Absence Management team completes a risk‑assessment form to identify any workplace or home‑office hazards for the parent and baby. | The UK policy describes a mandatory risk‑assessment that is completed within 1‑3 days of leave notification. | [3] |\n| **Flexible start‑date & split‑leave options** – parents can start leave on the day the child arrives, negotiate a different start date, or split the 16 weeks into up to three segments. | The global policy encourages parents to begin leave when the child arrives and allows up to three separate leave segments. | [5] |\n\nIn short, besides the time off itself, GitLab guarantees **full salary continuation**, **supplemental insurance coverage**, **flexible use of public holidays**, **extra “Family & Friends” days**, **structured coverage and career‑transition planning**, and **pre‑leave safety assessments** to help new parents focus on their families without financial or logistical worries.",
+     "gold": "A GitLab-branded new parent swag bundle (teething ring, baby socks, plush tag blanket, adult socks, baby bib and baby blanket).",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types",
+      "total-rewards/benefits/general-and-entity-benefits/korea-ltd-benefits",
+      "total-rewards/benefits/general-and-entity-benefits/ltd-benefits-uk"
+     ],
+     "citation_hit": false
+    },
+    {
+     "id": "M01",
+     "question": "I want to take 30 days off in a row. How much notice do I need, and whose approval?",
+     "answerable": true,
+     "verdict": "incorrect",
+     "reason": "The chatbot fails to mention the requirement for special permission from the People Business Partner and Absence Management team, which is a key part of the reference answer for absences longer than 25 days.",
+     "answer": "To take a 30‑day stretch of paid time off you must give **at least twice the number of days you’ll be away as advance notice**.  \n\n- 30 days × 2 = **60 business days** of notice (the “twice‑as‑many‑days” rule) [1][6].  \n\n**Who must approve it?**  \n\n1. **Your manager** – the request is entered in Workday and must be approved by the manager who coordinates coverage.  \n2. **Your team** – you’re expected to let any teammates who rely on you know about the upcoming absence so they can plan work accordingly (the handbook calls for “as much advance notice as possible” to the manager and team members) [1][6].  \n\n**What you need to do**\n\n1. Log the request in **Workday** (or the Workday Slack app) as “Paid Time Off.”  \n2. Provide the 60‑business‑day notice in the request.  \n3. Discuss the dates with your manager and ensure the team is aware of the coverage plan.  \n\nOnce the manager signs off, the request is recorded in Workday and the time away is officially approved. If you’re in a location with additional statutory rules (e.g., Brazil), the PEO may also need to process the request, but the primary approval still comes from your manager.",
+     "gold": "Notice of at least twice the time off (so about 60 days) and as much as possible, and because it is longer than 25 consecutive calendar days it needs special permission from your manager, People Business Partner and the Absence Management team.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-away-philosophy"
+     ],
+     "citation_hit": false
+    },
+    {
+     "id": "M02",
+     "question": "On a business trip where I stay with family instead of a hotel, what can I expense for meals and for my hosts?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the $120 daily meal limit and the $50 host gift limit, and the additional details regarding categories and receipts are supported by the cited handbook passages.",
+     "answer": "When you choose to stay with family or friends instead of a hotel, GitLab’s travel policy lets you claim two separate things:\n\n| What you’re claiming | How much you can claim | How to claim it |\n|----------------------|------------------------|-----------------|\n| **Gift for your host/hostess** (the “Self‑Stay Incentive”) | Up to **$50** for an appropriate gift | Submit the expense under the **Lodging** category in Navan and attach a receipt (or a note showing the purchase). |\n| **Meals you eat while traveling on company business** | Up to **$120 USD (or local equivalent)** per day | Submit the expense under **Traveling: meals for myself** (the “Meals while traveling” category). You must provide your own receipts, separate the bill from any group meals, and include a description of the trip/reason for travel. Tips are allowed up to 20 % (cash tips under $50 for US team members do not need a receipt). |\n\n**Key points to remember**\n\n* The $50 host‑gift is a flat limit – you cannot claim any additional lodging‑related costs (e.g., room‑service, dry‑cleaning) because you are not staying in a hotel.  \n* Meal reimbursement is capped at $120 per day; if you exceed that amount you will need to cover the excess yourself.  \n* Each meal expense must be documented with a receipt (or, for US cash tips under $50, a tip note is sufficient).  \n* Include a clear description of the business purpose of the trip when you submit the expense.  \n\nBy filing the two expense lines separately—one for the host gift (Lodging category) and one for your meals (Traveling: meals for myself)—you stay within GitLab’s Global Travel and Expense Policy.  \n\n**Sources**: Self‑Stay Incentive Policy – $50 host gift limit[1]; Meals while traveling on Company business – $120 per‑day limit, receipt requirements, tip rules[1].",
+     "gold": "Meals up to $120 USD per day, plus a host or hostess gift of up to $50.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M03",
+     "question": "How much can I spend on a regular bike through the bike-to-work scheme in Ireland compared with the Netherlands?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the spending limits for both countries (EUR 1,250 for Ireland and EUR 2,000 for the Netherlands) as stated in the reference and supported by the cited passages.",
+     "answer": "- **Ireland:** The bike‑to‑work scheme lets you purchase a regular (non‑electric) bike with a tax‑savvy salary‑sacrifice limit of **€1,250** [1].\n\n- **Netherlands:** GitLab’s Dutch bike‑to‑work program provides a higher allowance – you can spend up to **€2,000** on a bike (and accessories) [3].\n\n**Comparison:** You can spend about **€750 more** on a regular bike in the Netherlands (€2,000) than you can in Ireland (€1,250).",
+     "gold": "Ireland allows up to EUR 1,250 for a regular bike (once every 4 years); the Netherlands allows up to EUR 2,000 for a bike purchase (every 2 years).",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/bv-benefits-netherlands",
+      "total-rewards/benefits/general-and-entity-benefits/gitlab-ireland-ltd"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M04",
+     "question": "If I leave GitLab in the US, when does my medical coverage end and how long do I have to exercise my vested options?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "(human review) Both facts right (coverage ends at the end of the month; 90 days is the handbook's three months), but the option window is cited to a passage that doesn't contain it.",
+     "answer": "**Medical coverage**\n\n* For U.S. team members, **medical, dental and vision coverage ends on the last day of the month in which you leave GitLab**. All other benefits (e.g., retirement, life‑insurance, etc.) stop on your actual last day of employment [2][1].  \n* After your termination you may elect to continue the same medical, dental and vision plans through **COBRA** for up to **18 months**. COBRA enrollment paperwork is mailed to you within 14 days of the termination notice, and you have **60 days from receipt** to enroll; coverage is retro‑active to the first day you are without coverage [3][1].\n\n**Exercise of vested stock options**\n\n* When you leave, you can **exercise any options that are vested as of your last day of service** [4].  \n* The exact post‑termination exercise window is set out in the Stock Options handbook (the “Exercise Window after Termination” section). In practice GitLab follows the standard window (typically 90 days) [2].  \n* If you do not exercise an option before the end of that window, the option will **expire** – either at the end of the post‑termination window or, if it survives that period, **10 years from the date it was granted** [4].\n\n**Bottom line**\n\n* Medical (and dental/vision) coverage ends the last day of the month you depart, but you can keep it via COBRA for up to 18 months.  \n* You may exercise any vested options after your last day, usually within a 90‑day post‑termination window; any unexercised options then expire, and all options ultimately expire 10 years after grant.   [1][2][3][4]",
+     "gold": "Medical coverage ends at the end of the month you leave, and you have three months to exercise vested options.",
+     "cited_pages": [
+      "people-group/offboarding/faq",
+      "total-rewards/benefits/general-and-entity-benefits/inc-benefits-us",
+      "total-rewards/stock-options"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M05",
+     "question": "I'm a new father in Singapore. How much paternity leave can I get in total, and by when must GitLab's parental leave be used?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the 4 weeks of government-paid paternity leave, the 16-week total combined limit, and the requirement to use GitLab Parental Leave before the child's first birthday, all of which align with the reference and cited passages.",
+     "answer": "In Singapore you can combine the statutory paternity entitlement with GitLab’s global Parental‑Leave benefit:\n\n* **Statutory paternity leave** – 4 weeks of government‑paid leave (if you’ve been employed for at least 3 months before the due date) [2].  \n* **GitLab Parental Leave** – up to 16 weeks of paid leave for any new parent, which can be added to the statutory weeks. For eligible team members the two are stacked, giving a **maximum of 16 weeks total** of paternity‑related leave (4 weeks statutory + up to 12 weeks GitLab Parental Leave) [2].\n\n**When must the GitLab Parental Leave be taken?**  \nGitLab’s 16‑week paid Parental Leave must be used **before the child’s first birthday** (or the first anniversary of adoption, foster placement, or surrogacy birth) [5].\n\nSo, as a new father in Singapore you can take up to 16 weeks of combined leave, and you need to use GitLab’s Parental Leave portion before your child turns one year old.",
+     "gold": "4 weeks of government-paid paternity leave, up to 16 weeks in total combined with GitLab Parental Leave, which must be used before the child's first birthday.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types",
+      "total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M06",
+     "question": "I'm relocating to another country with GitLab after passing probation. Do I need a new probation period, and can I expense the relocation costs?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that no new probation is required if service is continuous and probation was already passed, and accurately notes that relocation costs cannot be expensed, aligning with the reference and cited passages.",
+     "answer": "**Probation period**\n\nNo – you will not have to start a new probationary period after you move.  \nThe handbook states that if you relocate to a different country (or change contracts) **and you have already completed the probation period for your original location/contract**, you do **not** need to go through the probation period of the new location or contract [1].\n\n**Relocation‑cost expenses**\n\nRelocation expenses are **not** reimbursable.  \nGitLab’s policy makes clear that relocation costs cannot be expensed, and the only relocation sponsorship currently offered is for moves to the Netherlands (and even then it does not cover family‑member costs) [2].  \n\nYou may expense visa‑related items (visa fee, lawyer, postage, etc.), but the actual moving or relocation costs themselves are not covered [5].\n\n**Bottom line**\n\n- You keep your completed probation status – no new probation is required after the move.  \n- You cannot expense the relocation (moving) costs; only visa‑related fees are eligible for reimbursement.",
+     "gold": "No new probation is needed if your service is continuous and you already passed probation, and relocation costs (and visa costs for work authorization) cannot be expensed.",
+     "cited_pages": [
+      "people-group/contracts-probation-periods",
+      "people-group/relocation",
+      "people-group/visas"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "U01",
+     "question": "What is the dress code for in-person customer meetings?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states that the handbook does not contain a specific dress code for in-person customer meetings and suggests consulting a manager instead of inventing an answer.",
+     "answer": "The GitLab handbook does not include a specific section that defines a dress‑code for in‑person customer meetings. The policies that are provided focus on travel expenses, hotel procedures, and anti‑harassment processes, but none of the cited documents mention attire expectations for meeting customers face‑to‑face. If you need guidance on appropriate dress, you may want to consult your manager or the People Business Partner for any informal recommendations that align with GitLab’s professional standards.",
+     "cited_pages": []
+    },
+    {
+     "id": "U02",
+     "question": "How do I book a meeting room at a GitLab office?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states that the handbook does not cover meeting room reservations and advises the user to seek internal resources, without inventing a specific answer.",
+     "answer": "GitLab’s public handbook doesn’t include a specific “how‑to” for reserving a physical meeting room, because most of our day‑to‑day work is done remotely and the handbook focuses on remote‑work tools, onboarding, off‑boarding, and time‑off processes. If you need to book a room at one of the few GitLab office locations, the best approach is to:\n\n1. **Check the internal facilities or office‑services page** in the company’s internal wiki (often linked from the “Tools” or “Facilities” sections of the handbook).  \n2. **Ask your manager or an onboarding buddy** for the contact information of the office admin or facilities team—they can point you to the room‑booking system (e.g., Google Calendar resource, Outlook room mailbox, or a dedicated booking platform).  \n3. **Use the standard company calendar** (Google Calendar or Outlook) and look for the “Room” resources associated with the office location; you can add the room as a resource when you create a meeting event.\n\nSince none of the provided handbook excerpts cover meeting‑room reservations, you’ll want to reach out internally (via Slack, your manager, or the facilities team) for the exact steps and any required permissions. [No source directly addresses this process.]",
+     "cited_pages": []
+    },
+    {
+     "id": "U03",
+     "question": "Does GitLab offer a four-day work week?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot correctly states that the handbook does not describe a four-day work week and concludes that it is not offered, without inventing specific policy details to answer the question affirmatively.",
+     "answer": "GitLab’s handbook does not describe a four‑day work‑week arrangement. Instead, the company’s time‑off policies focus on **flexible paid time off (PTO)** that you can use as needed (with advance‑notice requirements) [1], a **volunteer‑time‑off** option that follows the same flexible PTO framework [2], and statutory leave such as sick‑time [4] and parental leave [6]. GitLab also emphasizes an all‑remote culture with tools and guidance for staying productive, but there is no mention of a reduced‑hour or four‑day work‑week schedule in the handbook. Therefore, GitLab does not currently offer a four‑day work week as a standard benefit.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types",
+      "people-group/time-off-and-absence/time-off-types",
+      "total-rewards/benefits/general-and-entity-benefits/canada-corp-benefits"
+     ]
+    },
+    {
+     "id": "U04",
+     "question": "What is GitLab's policy on romantic relationships between coworkers?",
+     "answerable": false,
+     "verdict": "answered",
+     "reason": "The chatbot provides a specific policy interpretation stating that romantic relationships are not banned but are governed by anti-harassment and power-harassment provisions, which constitutes a direct answer to the question.",
+     "answer": "GitLab does not have a stand‑alone rule that says “co‑workers may not date one another.” Instead, romantic relationships are covered under the broader anti‑harassment and power‑harassment provisions that apply to all workplace interactions.\n\n* **Harassment‑free environment** – The Anti‑Harassment Policy makes clear that any speech or behaviour of a sexual nature that creates disadvantage, discomfort, or a hostile work environment is prohibited. If a romantic relationship turns into unwanted advances, sexual harassment, or creates a climate of intimidation, it would be a violation of the policy [2][1].\n\n* **Power‑harassment** – GitLab expressly forbids “power harassment,” which includes any use of authority that goes beyond legitimate business needs and harms the workplace (e.g., demanding menial tasks, isolating a colleague, or exploiting a superior‑subordinate dynamic). A romantic relationship that involves a clear power imbalance and results in the behaviours listed (threats, defamation, undue pressure, etc.) would be treated as power harassment [6].\n\n* **Reporting and support** – Team members who feel a relationship is creating an uncomfortable or unsafe environment can raise the issue with Team Member Relations (or a People Business Partner) without fear of retaliation. Team Member Relations provides a confidential, unbiased forum for such concerns [4].\n\n* **Overall expectation** – GitLab expects everyone to treat each other with fairness, respect, and transparency, and to keep all interactions—romantic or otherwise—professional and free from harassment [3][5].\n\n**In short:** Romantic relationships between coworkers are not outright banned, but they must remain consensual, professional, and must not give rise to sexual harassment, power harassment, or any other behaviour that damages the work environment. If a relationship does cross those lines, it is handled under the same anti‑harassment and Team Member Relations processes that apply to any other workplace conduct.",
+     "cited_pages": [
+      "people-group/anti-harassment",
+      "people-group/team-member-relations"
+     ]
+    },
+    {
+     "id": "U05",
+     "question": "When is the deadline for submitting my annual performance self-review?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states that the handbook does not contain the specific deadline and advises the user to check other resources without inventing an answer.",
+     "answer": "The handbook excerpts you shared don’t include a specific date for the annual performance‑self‑review deadline. Those sections cover discretionary‑bonus nominations, time‑off editing, probation‑period steps, visa processes, promotion reviews, and communication checklists for planned time away, but none mention the performance‑review schedule.\n\nTo get the exact deadline, I recommend checking the “Performance Management” or “Annual Review” page in the GitLab handbook (or the internal performance‑review calendar in Workday). If you still can’t locate it, reach out to your manager or People Operations—they can confirm the current submission deadline for your self‑review.",
+     "cited_pages": []
+    },
+    {
+     "id": "U06",
+     "question": "Does GitLab pay a sign-on bonus to new hires?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot correctly states that the handbook does not describe a sign-on bonus and does not invent an answer, while accurately citing related compensation details.",
+     "answer": "GitLab’s handbook does not describe a sign‑on bonus as part of a new‑hire compensation package. The only cash incentives mentioned for new employees are the $1,500 referral bonus (paid after the new hire has been on the payroll for three months) [1] and the regular base salary, equity grant, and benefits that are set at the time of hire [5]. There is no separate “sign‑on” bonus listed in the handbook.",
+     "cited_pages": [
+      "total-rewards/compensation",
+      "total-rewards/incentives"
+     ]
+    },
+    {
+     "id": "U07",
+     "question": "How much paid sabbatical leave do team members get after five years at GitLab?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states that the provided handbook excerpts do not contain information about paid sabbatical leave and does not invent an answer.",
+     "answer": "The handbook excerpts you shared do not include any information about a sabbatical‑type leave program. The sections that are listed cover annual vacation, sick leave, parental/adoption leave, and long‑term care leave, but none of them mention a paid sabbatical entitlement after five years of service.  \n\n**Therefore, based on the sources provided, there is no stated amount of paid sabbatical leave for team members after five years at GitLab.** If you need the exact policy, you may need to consult the full GitLab handbook or contact the People Operations team for the specific sabbatical guidelines.",
+     "cited_pages": []
+    },
+    {
+     "id": "U08",
+     "question": "What is the salary range for a Senior Backend Engineer in London?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states that the handbook does not disclose the specific salary range for the role and advises consulting internal resources, without inventing a numeric answer.",
+     "answer": "GitLab’s public handbook does not list a fixed dollar‑/pound‑amount range for any individual role (e.g., “Senior Backend Engineer – London”). Instead, the compensation policy explains **how** ranges are built:\n\n* GitLab sets a **mid‑point** that reflects the market‑aligned rate for a given role.  \n* The **full pay range** is then created by applying a **‑20 % to +20 % spread** around that midpoint (i.e., a compa‑ratio of 0.80 – 1.20) [4].\n\nSo, for a Senior Backend Engineer in London, the actual salary you would see on a pay‑slip is determined by:\n\n1. The market‑based midpoint that GitLab has calculated for that role (which is internal and not published in the handbook).  \n2. The allowable range of **80 % – 120 % of that midpoint**.\n\nBecause the handbook does not disclose the specific market midpoint for a Senior Backend Engineer in London, the exact numeric range (e.g., £ X – £ Y) isn’t publicly available. If you need the precise figures, you would need to consult GitLab’s internal compensation tools or contact your HR/Compensation partner, who can provide the role‑specific market data and the resulting salary band.  \n\n*Reference: GitLab’s “Understanding Compensation Ranges” explains the –20 % to +20 % range methodology.* [4]",
+     "cited_pages": [
+      "total-rewards/compensation"
+     ]
+    },
+    {
+     "id": "U09",
+     "question": "Does GitLab run an annual company hackathon with prizes?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot correctly states that the handbook does not contain information about an annual hackathon and avoids inventing an answer, while noting the absence of such documentation in the provided sources.",
+     "answer": "Based on the sections of the internal handbook that are available in the sources you provided, there is no mention of an annual company‑wide hackathon or any related prize program. The excerpts cover topics such as the **CTO DevSecOps Innovation Award**, referral bonuses, anniversary gifts, off‑boarding, and other employee incentives, but none of them reference a recurring hackathon event.  \n\nSo, according to the current handbook content you shared, GitLab does **not** appear to run an annual company hackathon with prizes (or at least it isn’t documented in the sections we have). If such an event exists, it would be described in a different part of the handbook that isn’t included in the sources you provided.",
+     "cited_pages": []
+    },
+    {
+     "id": "U10",
+     "question": "What is GitLab's stock price today?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot correctly stated it cannot provide real-time stock prices and directed the user to external financial sources without inventing a specific price.",
+     "answer": "I’m not able to provide real‑time market data such as the current price of GitLab’s stock. For the most up‑to‑date quote, you can check a financial news site, a stock‑market app, or a brokerage platform (e.g., Yahoo Finance, Google Finance, Bloomberg, your brokerage’s website, etc.). Those sources will show the latest trading price for GitLab’s ticker (GTLB).",
+     "cited_pages": []
+    },
+    {
+     "id": "U11",
+     "question": "What is the smoking policy at company events?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states that the provided sources do not contain information about the smoking policy and does not invent an answer.",
+     "answer": "I’m sorry, but the sources you provided don’t include any information about a smoking policy for company events. If you need details on that topic, you may want to consult the specific GitLab handbook section that addresses workplace or event policies, or reach out to your People Business Partner for clarification.",
+     "cited_pages": []
+    },
+    {
+     "id": "U12",
+     "question": "What prize does the Employee of the Month receive?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "The chatbot explicitly states it does not have information about the Employee of the Month prize and does not invent a specific answer.",
+     "answer": "I’m sorry, but the sections you’ve shared don’t include any information about an “Employee of the Month” prize. To find the details on that program, you’ll need to look at the part of the GitLab handbook that specifically covers employee recognition or “Employee of the Month” initiatives. If you have access to that section, it should outline what the award entails (e.g., gift, bonus, public acknowledgment, etc.).",
+     "cited_pages": []
+    }
+   ]
+  },
+  {
+   "mode": "final",
+   "name": "Final: hybrid search + grounded prompt",
+   "metrics": {
+    "Answer accuracy (correct)": "82% (32/39)",
+    "Correct + partial": "97% (38/39)",
+    "Citation accuracy": "97% (38/39)",
+    "Retrieval recall@6": "100% (39/39)",
+    "False refusals (answerable)": "0% (0/39)",
+    "Correct \"I don't know\" (unanswerable)": "100% (12/12)"
+   },
+   "overridden": 2,
+   "rows": [
+    {
+     "id": "A01",
+     "question": "How much notice should I give my manager before taking PTO?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the requirement to provide at least twice as many days of notice as the duration of the time off, including the specific example from the reference, and cites the relevant passages.",
+     "answer": "You should discuss your planned PTO with your manager and give **at least twice as many days of advance notice as the length of the time off** (e.g., a 3‑day PTO requires ≈ 6 business‑day notice)[1][2][3].",
+     "gold": "At least twice as many days as the planned time off (for example, 6 business days' notice for 3 days off), and as much notice as possible.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-away-philosophy",
+      "people-group/time-off-and-absence/time-off-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A02",
+     "question": "Is there a limit on how much PTO I can take?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately states that there is no set yearly limit and correctly identifies the requirement for special permission for time off exceeding 25 consecutive days, matching the reference answer and supported by the cited passage.",
+     "answer": "GitLab does not impose a fixed annual cap on Flexible PTO – there’s no set maximum number of days you can take in a year. However, any single stretch of time off that exceeds 25 consecutive calendar days (including weekends and holidays) requires special approval from your manager, People Business Partner, and the Absence Management Team [1]. The handbook also recommends taking at least two consecutive weeks and a minimum of 25 days total each year [1].",
+     "gold": "There is no set yearly limit, but time off longer than 25 consecutive calendar days needs special permission from your manager, People Business Partner and the Absence Management team.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-off-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A03",
+     "question": "What happens if I'm off sick for more than 6 consecutive days?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that sick absences of 6+ days become a leave of absence and accurately details the specific procedures for US (Tilt) and non-US (Compass/Workday) employees as per the reference and cited passages.",
+     "answer": "If a sick absence lasts 6 consecutive days or more it is treated as a **leave of absence** [1].\n\n**What you must do**\n\n* **USA** – Submit a leave request in Tilt (accessed through Okta). After you submit, GitLab builds a personalized leave plan in 2‑5 business days and notifies you when it’s ready [1].\n\n* **All other locations** –  \n  1. Open a Compass ticket to notify the Absence Management Team (they will explain the policy, review any statutory benefits, and guide next steps) [1].  \n  2. Enter the time away in Workday using the label **“Out Sick.”** The Absence Management team may edit or replace the entry on your behalf [1].  \n  3. Provide any required documentation (e.g., medical certificate, doctor’s note) according to local requirements [1].\n\n**Pay while on the leave**\n\nEligible team members receive 100 % of their weekly wages for up to 25 working days through the GitLab Sick Time policy, supplemented by any statutory sick pay you qualify for. Pay does not exceed 100 % of wages, and any portion of the leave beyond 25 working days is unpaid (subject to local rules) [3].\n\nSo, after 6 + consecutive sick days you transition to a leave of absence, follow the location‑specific reporting steps, and receive full‑wage pay for up to 25 working days.",
+     "gold": "It becomes a leave of absence. In the US you submit a leave request in Tilt; elsewhere you notify the Absence Management team with a Compass ticket and record the time as \"Out Sick\" in Workday.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-off-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A04",
+     "question": "How many days of jury duty does GitLab pay for?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the 25-day limit and 100% pay rate from the global policy (cited passage [1]) and accurately notes the 10-day limit for the Australian entity (cited passage [2]), which aligns with the reference answer and provides supported extra details.",
+     "answer": "GitLab’s paid‑jury‑duty entitlement varies by entity:\n\n* **Global Legal Civic Obligations Policy** – Team members receive 100 % of their weekly wages for jury‑duty leave **up to 25 working days**; any longer absence is reviewed case‑by‑case[1].  \n* **GitLab PTY Ltd. (Australia)** – The company “makes up” the difference so the employee gets 100 % of salary **for the first 10 days** of jury selection or duty[2].  \n\nOther regional policies (e.g., New Zealand, UK) describe jury‑service leave as unpaid or do not specify a paid‑days limit[3][4].",
+     "gold": "Up to the equivalent of 25 full working days, paid at the usual rate (100% of weekly wages); longer absences are reviewed case by case.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-off-types",
+      "total-rewards/benefits/general-and-entity-benefits/ltd-benefits-uk",
+      "total-rewards/benefits/general-and-entity-benefits/pty-benefits-australia",
+      "total-rewards/benefits/general-and-entity-benefits/pty-benefits-new-zealand"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A05",
+     "question": "How long is GitLab's parental leave, and by when do I have to use it?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the duration (16 weeks) and the deadline (before the child's first birthday or first anniversary of adoption/foster placement/surrogacy), which matches the reference answer and is supported by the cited passages.",
+     "answer": "GitLab provides 16 weeks of paid Parental Leave. It must be taken before the child’s first birthday (or, for adoption, foster placement, or surrogacy, before the first anniversary of that event) [1][5].",
+     "gold": "16 weeks of paid parental leave, to be used before the child's first birthday (or the first anniversary of the adoption, foster placement or surrogacy birth).",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A06",
+     "question": "Can I come back from parental leave at reduced hours?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that returning at 50% capacity is allowed, requires agreement with a manager, follows a 2-4 week guideline, and is not tracked in Workday (implied by the flexibility and lack of mention of tracking, though the reference explicitly states it, the chatbot's answer aligns with the key facts provided in the reference and cited passage).",
+     "answer": "Yes. GitLab lets team members return from parental leave at a reduced capacity (often ≈ 50 % of their normal workload). The arrangement is flexible—hours or days can be adjusted, and the schedule is set with your manager (typically a 2‑4‑week transition, but it can be customized) [1].",
+     "gold": "Yes, you can return at 50% capacity, agreed with your manager; the guideline is two to four weeks and it is not tracked in Workday.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A07",
+     "question": "How long do reinstatement rights last after military service?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that reinstatement rights last up to 2 years after military service ends, which matches the reference answer and is supported by the cited handbook passage.",
+     "answer": "Reinstatement rights are guaranteed for up to 2 years after the team member’s military service ends (including for team members with disabilities)[1].",
+     "gold": "Up to 2 years after the military service ends.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A08",
+     "question": "How far in advance should I book flights for business travel?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately states the 14-day and 21-day advance booking requirements for domestic and international flights, which matches the reference answer and is supported by the cited handbook passages.",
+     "answer": "For business travel you should book as early as possible:\n\n* **Domestic flights:** at least 14 days in advance[4]  \n* **International flights:** at least 21 days in advance[4]\n\nBooking less than 14 days out (or outside these windows) will trigger an out‑of‑policy flag in Navan[6].",
+     "gold": "Ideally at least 14 days ahead for domestic flights and 21 days ahead for international flights.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A09",
+     "question": "Can I book business class for a long domestic flight?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that business class cannot be booked for long domestic flights and accurately cites the policy allowing only one class upgrade above standard economy, provided it remains below business class.",
+     "answer": "No. For domestic flights longer than 5 hours, you may only upgrade one class above standard economy, and the upgrade must stay **below business class**[1]. The policy does not permit booking business class on long domestic trips.",
+     "gold": "No. For domestic flights where each segment is over 5 hours you may book the next class up from standard economy, but it must be below business class.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A10",
+     "question": "What is the daily meal limit when I travel for work?",
+     "answerable": true,
+     "verdict": "incorrect",
+     "reason": "The chatbot claims there is no fixed dollar cap and that reimbursement is based on the per-diem rate, which contradicts the reference answer stating a specific limit of up to $120 USD per day.",
+     "answer": "When you travel for work, meal reimbursement is based on the per‑diem rate for the destination rather than a fixed dollar cap. Travelers are reimbursed the applicable M&IE (Meals & Incidental Expenses) per‑diem amount for each travel day, and receipts are not required for these meals [1].",
+     "gold": "Up to $120 USD (or local equivalent) per day.",
+     "cited_pages": [
+      "finance/travel/sponsored"
+     ],
+     "citation_hit": false
+    },
+    {
+     "id": "A11",
+     "question": "How much can I expense for internet access while traveling?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately states the limit of $50 USD (or local equivalent) per day, which matches the reference answer and the cited handbook passage.",
+     "answer": "You can expense internet access while traveling up to $50 USD (or the local‑currency equivalent) per day [1].",
+     "gold": "Up to $50 USD (or local equivalent) per day.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A12",
+     "question": "Can I expense a coworking space, and what is the limit?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that coworking space is reimbursable with pre-approval, states the $700 monthly limit, and accurately notes the requirement for the space to be professionally managed and within commuting distance, all of which are supported by the cited passages.",
+     "answer": "Yes. GitLab reimburses the rent of a professional co‑working facility.\n\n* **Monthly co‑working space** – You may claim the monthly rent up to **$700 per month** (the space must meet the professional‑provider criteria and be within a commutable distance of your primary residence). Pre‑approval is required, and if you book more than 5 days in the month you need additional manager‑and‑finance approval before submitting the expense [1].\n\n* **Daily office pass** – For one‑off days you can claim up to **$100 per day**, with up to **5 one‑off days** in a calendar month that do **not** require manager or finance approval [2].  \n\nAll other costs (travel to the space, parking, meals, insurance, etc.) are not reimbursable.",
+     "gold": "Yes, with pre-approval, up to $700 per month; it must be a professionally managed coworking space within commuting distance (about 50 km) of your primary residence, except day passes during business travel.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A13",
+     "question": "How much can I spend on business cards?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the $150 per quarter limit and the requirement for manager approval via email for higher amounts, which aligns with the reference and cited passages.",
+     "answer": "You can spend up to **$150 per quarter** on business cards. If you need to exceed that amount, you must obtain your manager’s approval by email and attach that email to the expense receipt [2].",
+     "gold": "Up to $150 per quarter, ordered through Moo; more than that needs your manager's approval by email.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A14",
+     "question": "Can I expense my monthly mobile phone bill?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "(human review) Matches the expense policy. The $100 cap and itemized receipt are in the cited section, and \"not the family-plan share\" agrees with \"only the employee's portion of a family plan is reimbursable\". The judge misread it.",
+     "answer": "Yes – the monthly service charge for a cell‑phone can be reimbursed, but only the phone‑service portion (not the device, accessories or family‑plan share) and only for Team Members whose phone is essential to their role. The claim is capped at $100 per month, requires an itemised receipt (or a prorated split if the bill covers multiple services), and must stay within the $100 limit [1].",
+     "gold": "Monthly cell phone service charges are reimbursable only for team members whose phones are vital to their position; the phone itself, accessories and hardware costs are not reimbursable.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A15",
+     "question": "When should I submit my final expenses before leaving GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The answer correctly states the one-week deadline and distinguishes between the processes for employees (Navan) and contractors (final invoice), fully aligning with the reference and cited passages.",
+     "answer": "Submit your final expense report at least one week before your departure date — employees should create the report in Navan, while contractors should include any outstanding expenses with their final invoice so they can be reimbursed promptly[1]. This timing is also reinforced in the off‑boarding call checklist, which reminds team members to create the final expense report in Navan (or attach it to the final invoice) to ensure timely reimbursement[5].",
+     "gold": "At least one week before your departure date, as a final expense report in Navan (employees) or with the final invoice (contractors).",
+     "cited_pages": [
+      "people-group/offboarding",
+      "people-group/offboarding/faq"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A16",
+     "question": "When does my US medical coverage end after I leave GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that US medical, dental, and vision coverage ends at the end of the month of departure, while other benefits end on the last day, which aligns perfectly with the reference and cited passages.",
+     "answer": "Your medical, dental, and vision coverage ends on the last day of the month in which you leave GitLab — the coverage stops at the end of that month, while other benefits end on your actual last day of work[1][6].",
+     "gold": "US medical, dental and vision coverage ends at the end of the month you leave; other benefits end on your last day.",
+     "cited_pages": [
+      "people-group/offboarding/faq"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A17",
+     "question": "I lost my work laptop. What should I do?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the immediate action (emailing panic@gitlab.com) and includes supported details about documentation and temporary device exceptions from the cited passages.",
+     "answer": "- Immediately email panic@gitlab.com to report the lost laptop so the security team can respond right away[3].  \n- GitLab may ask you to provide documentation of the loss (e.g., a police report)[3].  \n- Open a Policy Exception Request to obtain a temporary non‑company device while the issue is resolved; the device must meet basic configuration standards and you may not use public computers such as library or hotel kiosks[4].",
+     "gold": "Email panic@gitlab.com right away so the security and production teams can respond immediately.",
+     "cited_pages": [
+      "people-group/acceptable-use-policy"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A18",
+     "question": "Can I read work email on my personal phone?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that personal phones can access work email if passcode-enabled and 2FA is enforced, which aligns with the reference and cited passages, while the additional details about OS updates and Security team approval are supported by the cited text.",
+     "answer": "Yes—you may read work email on a personal phone, but only if the device complies with GitLab’s BYOD security requirements. Your personal mobile device must be passcode‑enabled, have 2‑factor authentication enforced for GitLab.com and Google Workspace accounts, run the latest operating‑system version with all patches applied, and be approved by the Security team if needed[3].",
+     "gold": "Personal phones and tablets may access GitLab-managed data such as email if they are passcode-enabled, with 2FA enforced; non-company devices are otherwise not permitted, and RED data is always prohibited.",
+     "cited_pages": [
+      "people-group/acceptable-use-policy"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A19",
+     "question": "How long is the probation period at GitLab?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly states the 1-9 month range and location dependency, but it omits the specific rule regarding team members who relocate with continuous service and have already passed probation, which is a key part of the reference answer.",
+     "answer": "GitLab’s probationary period varies by location — team members can have a probation period ranging from 1 to 9 months, with each country’s contract typically using the maximum allowable length for that location[1].",
+     "gold": "It depends on location, between 1 and 9 months; team members who relocate with continuous service and have already passed probation don't repeat it.",
+     "cited_pages": [
+      "people-group/contracts-probation-periods"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A20",
+     "question": "Do I need approval before starting a side project?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that approval is required, specifies the need for written disclosure to the manager, and accurately lists the conditions under which approval is denied (conflict of interest or impact on job performance), all of which are supported by the cited passages.",
+     "answer": "Yes. Before beginning any side project (or other outside activity), you must disclose the activity in writing to your manager and obtain the required approvals. Approval will be denied if the project creates a conflict of interest or interferes with your ability to perform your job [2][3].",
+     "gold": "Yes. You must disclose outside activities (paid or unpaid) in writing to your manager before starting; approval is refused if it is a conflict of interest or would affect your ability to do your job.",
+     "cited_pages": [
+      "people-group/contracts-probation-periods"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A21",
+     "question": "What anniversary gift do I get after five years at GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the five-year anniversary gift as a GitLab-branded computer backpack, which matches the reference answer and is supported by the cited handbook passage.",
+     "answer": "Team members celebrating their five‑year hire‑date anniversary are eligible to receive a GitLab‑branded computer backpack as their anniversary gift[1].",
+     "gold": "The option of a GitLab-branded computer backpack.",
+     "cited_pages": [
+      "people-group/celebrations"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A22",
+     "question": "How much does GitLab match on the US 401(k)?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly states the match percentage, earnings cap, and annual limit, but it omits the key details regarding immediate eligibility and vesting mentioned in the reference.",
+     "answer": "GitLab matches 50 % of an employee’s contributions on the first 6 % of their earnings, up to a maximum of $1,500 per year[1].",
+     "gold": "50% of contributions on the first 6% of earnings, up to $1,500 a year, with immediate eligibility and vesting.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/inc-benefits-us"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A23",
+     "question": "I'm in the US and already have medical coverage through my spouse. Can I opt out of GitLab's medical plan?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies that the user can opt out, specifies the $150 monthly allowance, and accurately notes the requirement to actively waive coverage in PlanSource, all of which align with the reference and cited passages.",
+     "answer": "Yes. If you already have group medical coverage (e.g., through your spouse), you may waive GitLab’s medical plan and receive a **$150 per month allowance** instead. You must actively waive coverage in PlanSource to get the allowance; if you don’t enroll in a plan during the election period, you’ll be automatically enrolled in the Medical Waiver Allowance [2]. The handbook also notes that employees with existing coverage can simply opt out and receive a monthly allowance [1].",
+     "gold": "Yes. If you actively waive medical coverage in PlanSource you receive a $150 monthly allowance and can still enroll in dental, vision and other benefits.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/inc-benefits-us"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A24",
+     "question": "Who is automatically enrolled in the UK pension scheme?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately lists the three criteria for automatic enrollment (earnings over £10,000, age 22+, under State Pension Age) and correctly identifies the plan as the UK pension scheme, matching the reference and cited passages.",
+     "answer": "In the UK, GitLab automatically enrolls any team member who :\n\n* earns more than £10,000 a year, and  \n* is aged 22 or older, and  \n* is under the State Pension age [3].\n\nEmployees who do not meet those thresholds (e.g., “Entitled workers” earning under £6,240 or “Non‑Eligible job‑holders” earning between £6,240 and £10,000) are only offered the chance to join, not automatically enrolled [3].",
+     "gold": "Team members who earn over £10,000 a year, are aged 22 or over and are under State Pension Age are automatically enrolled in the Scottish Widows Group Personal Pension Plan.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/ltd-benefits-uk"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A25",
+     "question": "Do team members in Belgium get meal vouchers?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly confirms that Belgium-based team members receive meal vouchers, specifies the effective date context (implied by the current policy), and accurately details the proration based on worked days in the previous month, supported by the cited passage.",
+     "answer": "Yes. All Belgium‑based GitLab team members receive tax‑advantaged meal vouchers (loaded onto a Pluxee electronic meal card) for each worked day, with a daily value of €8.00 (employer contributes €6.91 tax‑free and the employee €1.09) and vouchers are loaded by the third week of the following month[1].",
+     "gold": "Yes, since 2026-03-01 all Belgium-based team members get meal vouchers, prorated by the days worked in the previous month.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/bv-benefits-belgium"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A26",
+     "question": "How much does GitLab contribute to KiwiSaver in New Zealand?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly states the contribution rate and that it is paid on top of salary, but it omits the important details regarding automatic enrollment and the 56-day opt-out period mentioned in the reference.",
+     "answer": "GitLab contributes 3 % of an employee’s base salary to KiwiSaver (paid on top of the salary)[1].",
+     "gold": "3% of base salary, paid on top of salary; team members are enrolled automatically and can opt out within the first 56 days.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/pty-benefits-new-zealand"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A27",
+     "question": "How many Modern Health therapy sessions do I get, and can my family use it?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly states the number of therapy sessions and that family members are covered, but it omits the specific eligibility details (spouse/partner and children up to age 27) provided in the reference answer.",
+     "answer": "You receive **six complimentary therapy sessions per year** with licensed mental‑health professionals [2].  \n\nFamily members are covered: adult spouses, partners and dependents can access their own therapy sessions (up to six per year), and minors can receive therapy services with parent/guardian coordination [1][2][3].",
+     "gold": "6 free therapy sessions and 6 free coaching sessions per year; eligible family members include a spouse or partner and children (and partner's children) up to age 27.",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits",
+      "total-rewards/benefits/modern-health"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A28",
+     "question": "How much is the referral bonus, and when is it paid?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The answer correctly identifies the standard $1,500 bonus and the 3-month payment timing, and accurately includes the specific details of the Q4 AE campaign supported by the cited passages.",
+     "answer": "- The standard referral bonus is a **flat $1,500** paid to the referring team member once the new hire has completed **three months of employment** [1][2].  \n- During the limited **Q4 Account‑Executive referral campaign (Dec 8 2025 – Feb 23 2026)** the bonus is increased to **$7,000** for Commercial/New‑Business AEs and **$10,000** for Strategic/Major AEs [4].  \n\n**Payment timing**  \n- After the 3‑month employment milestone, the People Operations team reviews the weekly Referral Bonus Audit report, adds a one‑time payment to Workday, and notifies Payroll, which then processes the payout [3].  \n\nSo, normally $1,500 is paid after the new hire’s 3‑month anniversary, with the payout handled in the next weekly payroll cycle; higher amounts apply only for the specified AE campaign period.",
+     "gold": "A flat $1,500 for a new hire, paid once the new team member has been employed for 3 months.",
+     "cited_pages": [
+      "total-rewards/incentives"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A29",
+     "question": "How long do I have to exercise my vested stock options after leaving GitLab?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the three-month/90-day window for exercising vested options after termination and notes the forfeiture if not exercised, which aligns with the reference and cited passages.",
+     "answer": "You have a three‑month (≈ 90 day) window after your termination to exercise any options that were vested when you left GitLab [2][3]. If you do not exercise within that period, the vested options are forfeited. Note that, regardless of termination, any options that remain unexercised will also expire 10 years after they were issued [1].",
+     "gold": "Three months; vested options not exercised in that window are lost.",
+     "cited_pages": [
+      "total-rewards/stock-options"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A30",
+     "question": "When are ESPP shares purchased?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "The answer correctly identifies the purchase dates but omits the detail that only whole shares are purchased, which is part of the reference answer.",
+     "answer": "ESPP shares are bought on the scheduled Purchase Dates that fall at the end of each Purchase Period – normally May 31 and November 30 each year [2].",
+     "gold": "On the purchase date at the end of each purchase period, normally May 31 and November 30; only whole shares are bought.",
+     "cited_pages": [
+      "total-rewards/stock-options"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A31",
+     "question": "Does GitLab sponsor US H-1B visas?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that GitLab does not sponsor US H-1B visas, which aligns with the reference answer and is supported by the cited handbook passages listing the H-1B as a non-sponsored visa and stating the general policy against sponsorship.",
+     "answer": "No. GitLab does not sponsor US H‑1B visas — it is listed among the visas the company does not sponsor, and GitLab’s policy states it does not support any visa that requires sponsorship [1][4].",
+     "gold": "No. The US H-1B (and H-1B1) is on the list of visas GitLab does not sponsor.",
+     "cited_pages": [
+      "people-group/visas"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A32",
+     "question": "How is compa-ratio calculated?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states the formula for calculating compa-ratio as salary divided by the midpoint of the compensation range, which aligns perfectly with the reference answer and the cited handbook passage.",
+     "answer": "Compa‑ratio is calculated by dividing a team member’s salary (or total target cash) by the midpoint of the compensation range for their role:\n\n**Compa‑ratio = Team member’s salary ÷ Midpoint of compensation range**[1].",
+     "gold": "Salary divided by the midpoint of the compensation range; for example $90,000 with a $100,000 midpoint is 0.90.",
+     "cited_pages": [
+      "total-rewards/compensation"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "A33",
+     "question": "What does GitLab give new parents besides leave?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot accurately lists all items in the swag bundle and correctly notes that they are GitLab-branded, matching the reference answer and supported by the cited passage.",
+     "answer": "GitLab sends new parents a “New Parent Swag” bundle – a package that includes a teething ring, baby socks, a plush tag blanket, adult socks, a baby bib and a baby blanket, all GitLab‑branded. The Absence Management team orders and ships the gift each week; the employee or manager does not need to take any action. [2]",
+     "gold": "A GitLab-branded new parent swag bundle (teething ring, baby socks, plush tag blanket, adult socks, baby bib and baby blanket).",
+     "cited_pages": [
+      "people-group/celebrations"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M01",
+     "question": "I want to take 30 days off in a row. How much notice do I need, and whose approval?",
+     "answerable": true,
+     "verdict": "partial",
+     "reason": "(human review) Notice rule right, but it misses the special permission needed beyond 25 consecutive days. Unlike the baseline it doesn't claim only the manager approves.",
+     "answer": "You must give **at least twice the number of days you’ll be away as advance notice**. For a 30‑day stretch that means **60 business‑day notice** before the start date[1][2].  \n\nThe request is first reviewed and approved by **your manager** (who will check the request against team deliverables and business needs). If the manager needs to change the plan they must do so within 48 hours; if a compromise can’t be reached the issue can be escalated to the manager’s manager[3].  \n\nAll approved time‑off must then be entered in Workday[5].",
+     "gold": "Notice of at least twice the time off (so about 60 days) and as much as possible, and because it is longer than 25 consecutive calendar days it needs special permission from your manager, People Business Partner and the Absence Management team.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/time-away-philosophy",
+      "people-group/time-off-and-absence/time-off-types"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M02",
+     "question": "On a business trip where I stay with family instead of a hotel, what can I expense for meals and for my hosts?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the $120 daily meal limit and the $50 host gift limit, and the additional details regarding receipts and tips are supported by the cited handbook passages.",
+     "answer": "- **Host/hostess gift:** If you stay with family or friends you may expense a one‑time gift of up to **$50** for the host/hostess [1].  \n- **Meals for yourself:** Meals incurred while traveling on company business are reimbursable up to **$120 USD (or local equivalent) per day**. You must submit your own receipts, separate the meal billing from any group bills, and include tips (up to 20 % of the meal cost). For U.S. team members, cash tips under $50 do not need a receipt [1].",
+     "gold": "Meals up to $120 USD per day, plus a host or hostess gift of up to $50.",
+     "cited_pages": [
+      "finance/expenses"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M03",
+     "question": "How much can I spend on a regular bike through the bike-to-work scheme in Ireland compared with the Netherlands?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the spending limits for both countries (EUR 1,250 for Ireland and EUR 2,000 for the Netherlands) as stated in the reference and supported by the cited passages.",
+     "answer": "- Ireland (GitLab Ireland Ltd): the regular‑bike limit is **€1,250** per employee [1].  \n- Netherlands (GitLab BV): the bike‑to‑work scheme allows up to **€2,000** for a bike purchase (including accessories) [3].  \n\nSo you can spend €1,250 on a regular bike in Ireland, compared with €2,000 in the Netherlands.",
+     "gold": "Ireland allows up to EUR 1,250 for a regular bike (once every 4 years); the Netherlands allows up to EUR 2,000 for a bike purchase (every 2 years).",
+     "cited_pages": [
+      "total-rewards/benefits/general-and-entity-benefits/bv-benefits-netherlands",
+      "total-rewards/benefits/general-and-entity-benefits/gitlab-ireland-ltd"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M04",
+     "question": "If I leave GitLab in the US, when does my medical coverage end and how long do I have to exercise my vested options?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that medical coverage ends at the end of the month of departure and that there is a three-month (90-day) window to exercise vested options, which aligns perfectly with the reference answer and cited passages.",
+     "answer": "- In the United States, your medical (as well as dental and vision) coverage ends on the last day of the month in which you leave GitLab [1].  \n- After termination you have a three‑month (90‑day) window to exercise any options that were vested as of your last day of service [4][6].",
+     "gold": "Medical coverage ends at the end of the month you leave, and you have three months to exercise vested options.",
+     "cited_pages": [
+      "people-group/offboarding/faq",
+      "total-rewards/stock-options"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M05",
+     "question": "I'm a new father in Singapore. How much paternity leave can I get in total, and by when must GitLab's parental leave be used?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly identifies the 4 weeks of government-paid paternity leave, the 16-week total combined limit, and the requirement to use the leave before the child's first birthday, all of which are supported by the cited passages.",
+     "answer": "- In Singapore you are eligible for **4 weeks of government‑paid paternity leave** and, when you add GitLab’s Parental Leave, you can receive **up to a total of 16 weeks** of paid leave (i.e., up to 12 weeks of GitLab Parental Leave on top of the statutory 4 weeks) [1].\n\n- GitLab’s 16 weeks of paid Parental Leave must be taken **before the child’s first birthday** (or before the first anniversary of an adoption, foster placement, or surrogacy birth) [2][3].",
+     "gold": "4 weeks of government-paid paternity leave, up to 16 weeks in total combined with GitLab Parental Leave, which must be used before the child's first birthday.",
+     "cited_pages": [
+      "people-group/time-off-and-absence/leave-types",
+      "total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "M06",
+     "question": "I'm relocating to another country with GitLab after passing probation. Do I need a new probation period, and can I expense the relocation costs?",
+     "answerable": true,
+     "verdict": "correct",
+     "reason": "The chatbot correctly states that no new probation is required due to continuous service and that relocation costs cannot be expensed, aligning perfectly with the reference and cited passages.",
+     "answer": "No. Because you have uninterrupted service and have already completed the probationary period in your original location, you do **not** have to go through a new probation period after the move [1].\n\nYou cannot expense relocation costs. The handbook allows reimbursement only for certain visa‑related items (visa fee, lawyer, postage, etc.) and explicitly states that relocation costs are **not** eligible for expense reimbursement [4].",
+     "gold": "No new probation is needed if your service is continuous and you already passed probation, and relocation costs (and visa costs for work authorization) cannot be expensed.",
+     "cited_pages": [
+      "people-group/contracts-probation-periods",
+      "people-group/visas"
+     ],
+     "citation_hit": true
+    },
+    {
+     "id": "U01",
+     "question": "What is the dress code for in-person customer meetings?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U02",
+     "question": "How do I book a meeting room at a GitLab office?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U03",
+     "question": "Does GitLab offer a four-day work week?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U04",
+     "question": "What is GitLab's policy on romantic relationships between coworkers?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U05",
+     "question": "When is the deadline for submitting my annual performance self-review?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U06",
+     "question": "Does GitLab pay a sign-on bonus to new hires?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U07",
+     "question": "How much paid sabbatical leave do team members get after five years at GitLab?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U08",
+     "question": "What is the salary range for a Senior Backend Engineer in London?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U09",
+     "question": "Does GitLab run an annual company hackathon with prizes?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U10",
+     "question": "What is GitLab's stock price today?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U11",
+     "question": "What is the smoking policy at company events?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    },
+    {
+     "id": "U12",
+     "question": "What prize does the Employee of the Month receive?",
+     "answerable": false,
+     "verdict": "declined",
+     "reason": "Gave the refusal reply.",
+     "answer": "I don't know based on the handbook.",
+     "cited_pages": []
+    }
+   ]
+  }
+ ]
+}

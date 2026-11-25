@@ -1,0 +1,9 @@
+.venv
+.env
+.git
+.pytest_cache
+__pycache__
+data/
+tests/
+eval/questions.yaml
+eval/run_eval.py

@@ -1,0 +1,701 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T18:46:29+00:00",
+  "title": "Design System: Handbook Assistant",
+  "extensions": {
+    "colorMeta": {
+      "steel": {
+        "role": "primary",
+        "displayName": "Drawer Steel",
+        "canonical": "#2f3a36",
+        "tonalRamp": [
+          "#090c0b",
+          "#222826",
+          "#3e4744",
+          "#5e6965",
+          "#818c88",
+          "#a7b0ad",
+          "#cbd3d0",
+          "#eaf0ee"
+        ]
+      },
+      "steel-raised": {
+        "role": "primary",
+        "displayName": "Raised Steel",
+        "canonical": "#3d4a45",
+        "tonalRamp": [
+          "#080c0b",
+          "#212826",
+          "#3e4844",
+          "#5d6a64",
+          "#808d87",
+          "#a6b1ac",
+          "#cbd3d0",
+          "#eaf0ee"
+        ]
+      },
+      "steel-ink": {
+        "role": "neutral",
+        "displayName": "Steel Ink",
+        "canonical": "#eef0ea",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#262724",
+          "#444642",
+          "#656762",
+          "#888a85",
+          "#adaeaa",
+          "#d0d1ce",
+          "#eeefec"
+        ]
+      },
+      "steel-ink-muted": {
+        "role": "neutral",
+        "displayName": "Steel Ink Muted",
+        "canonical": "#c3cbc4",
+        "tonalRamp": [
+          "#0a0c0a",
+          "#242824",
+          "#414742",
+          "#616862",
+          "#848b85",
+          "#aab0ab",
+          "#ced2ce",
+          "#ecefec"
+        ]
+      },
+      "brass": {
+        "role": "secondary",
+        "displayName": "Label Brass",
+        "canonical": "#b8924a",
+        "tonalRamp": [
+          "#140900",
+          "#352300",
+          "#5a4001",
+          "#826017",
+          "#a58345",
+          "#c6aa78",
+          "#e4cea7",
+          "#fdecd0"
+        ]
+      },
+      "brass-light": {
+        "role": "secondary",
+        "displayName": "Brass Light",
+        "canonical": "#ecd39d",
+        "tonalRamp": [
+          "#110a00",
+          "#302508",
+          "#53431c",
+          "#786333",
+          "#9b8759",
+          "#bdac87",
+          "#ddd0b2",
+          "#f8eed8"
+        ]
+      },
+      "catalog-red": {
+        "role": "primary",
+        "displayName": "Catalog Red",
+        "canonical": "#b03524",
+        "tonalRamp": [
+          "#200000",
+          "#4c0903",
+          "#7b2014",
+          "#ad3929",
+          "#d26250",
+          "#ef9180",
+          "#ffbbad",
+          "#ffdfd4"
+        ]
+      },
+      "catalog-red-dark": {
+        "role": "primary",
+        "displayName": "Catalog Red (dark)",
+        "canonical": "#a63322",
+        "tonalRamp": [
+          "#1f0000",
+          "#4a0c05",
+          "#792317",
+          "#a93d2c",
+          "#cf6553",
+          "#ec9282",
+          "#ffbdae",
+          "#ffe0d5"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#eceee8",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#262724",
+          "#444642",
+          "#656762",
+          "#888a85",
+          "#adaeaa",
+          "#d0d1ce",
+          "#eeefec"
+        ]
+      },
+      "ground-dark": {
+        "role": "neutral",
+        "displayName": "Ground (dark)",
+        "canonical": "#151a18",
+        "tonalRamp": [
+          "#0a0c0b",
+          "#242726",
+          "#424644",
+          "#626865",
+          "#858b88",
+          "#aaafad",
+          "#ced2d0",
+          "#ecefee"
+        ]
+      },
+      "ground-ink": {
+        "role": "neutral",
+        "displayName": "Ground Ink",
+        "canonical": "#1d2533",
+        "tonalRamp": [
+          "#080b10",
+          "#22272f",
+          "#3e4551",
+          "#5d6776",
+          "#818a99",
+          "#a7aebc",
+          "#cbd1dc",
+          "#eaeff7"
+        ]
+      },
+      "ground-ink-dark": {
+        "role": "neutral",
+        "displayName": "Ground Ink (dark)",
+        "canonical": "#e9ece5",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#262724",
+          "#444641",
+          "#656761",
+          "#888a84",
+          "#adafaa",
+          "#d0d2ce",
+          "#eeefec"
+        ]
+      },
+      "ground-ink-muted": {
+        "role": "neutral",
+        "displayName": "Ground Ink Muted",
+        "canonical": "#4a5462",
+        "tonalRamp": [
+          "#080b10",
+          "#21272e",
+          "#3e4650",
+          "#5d6775",
+          "#808a98",
+          "#a6afba",
+          "#cbd2db",
+          "#eaeff6"
+        ]
+      },
+      "ground-ink-muted-dark": {
+        "role": "neutral",
+        "displayName": "Ground Ink Muted (dark)",
+        "canonical": "#b4bcb3",
+        "tonalRamp": [
+          "#0a0c09",
+          "#242823",
+          "#414741",
+          "#616861",
+          "#858b84",
+          "#aab0a9",
+          "#ced2cd",
+          "#ecefec"
+        ]
+      },
+      "ground-hair": {
+        "role": "neutral",
+        "displayName": "Ground Hair",
+        "canonical": "#c9cbc2",
+        "tonalRamp": [
+          "#0b0b09",
+          "#262723",
+          "#444640",
+          "#65675f",
+          "#888a83",
+          "#adafa8",
+          "#d0d2cc",
+          "#eeefeb"
+        ]
+      },
+      "ground-hair-dark": {
+        "role": "neutral",
+        "displayName": "Ground Hair (dark)",
+        "canonical": "#39433f",
+        "tonalRamp": [
+          "#090c0b",
+          "#222826",
+          "#3f4744",
+          "#5f6965",
+          "#828c88",
+          "#a8b0ad",
+          "#ccd3d0",
+          "#ebf0ee"
+        ]
+      },
+      "card-stock": {
+        "role": "neutral",
+        "displayName": "Card Stock",
+        "canonical": "#f6f6f1",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#272724",
+          "#454542",
+          "#666662",
+          "#898985",
+          "#aeaeab",
+          "#d1d1ce",
+          "#eeeeec"
+        ]
+      },
+      "card-stock-dark": {
+        "role": "neutral",
+        "displayName": "Card Stock (dark)",
+        "canonical": "#dddfd5",
+        "tonalRamp": [
+          "#0b0b09",
+          "#262722",
+          "#45463f",
+          "#65675f",
+          "#898a82",
+          "#adafa8",
+          "#d0d2cc",
+          "#eeefeb"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Paper (dark)",
+        "canonical": "#e5e6de",
+        "tonalRamp": [
+          "#0b0b09",
+          "#262723",
+          "#454640",
+          "#666760",
+          "#898a83",
+          "#aeaea9",
+          "#d1d1cd",
+          "#eeefeb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1d2533",
+        "tonalRamp": [
+          "#080b10",
+          "#22272f",
+          "#3e4551",
+          "#5d6776",
+          "#818a99",
+          "#a7aebc",
+          "#cbd1dc",
+          "#eaeff7"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#4a5462",
+        "tonalRamp": [
+          "#080b10",
+          "#21272e",
+          "#3e4650",
+          "#5d6775",
+          "#808a98",
+          "#a6afba",
+          "#cbd2db",
+          "#eaeff6"
+        ]
+      },
+      "ink-muted-dark": {
+        "role": "neutral",
+        "displayName": "Ink Muted (dark)",
+        "canonical": "#414b58",
+        "tonalRamp": [
+          "#080b0f",
+          "#21272e",
+          "#3e4650",
+          "#5d6774",
+          "#808a97",
+          "#a6afba",
+          "#cbd2da",
+          "#eaeff5"
+        ]
+      },
+      "hair": {
+        "role": "neutral",
+        "displayName": "Hair",
+        "canonical": "#c9cbc2",
+        "tonalRamp": [
+          "#0b0b09",
+          "#262723",
+          "#444640",
+          "#65675f",
+          "#888a83",
+          "#adafa8",
+          "#d0d2cc",
+          "#eeefeb"
+        ]
+      },
+      "hair-dark": {
+        "role": "neutral",
+        "displayName": "Hair (dark)",
+        "canonical": "#b7b9b0",
+        "tonalRamp": [
+          "#0b0b09",
+          "#262723",
+          "#444640",
+          "#65675f",
+          "#888a82",
+          "#adafa8",
+          "#d0d2cc",
+          "#eeefeb"
+        ]
+      },
+      "ruled-blue": {
+        "role": "tertiary",
+        "displayName": "Ruled Blue",
+        "canonical": "#dbe3ef",
+        "tonalRamp": [
+          "#090b0e",
+          "#23272c",
+          "#40454d",
+          "#606770",
+          "#838a93",
+          "#a9aeb7",
+          "#cdd1d8",
+          "#ebeff4"
+        ]
+      },
+      "ruled-blue-dark": {
+        "role": "tertiary",
+        "displayName": "Ruled Blue (dark)",
+        "canonical": "#c7d0dd",
+        "tonalRamp": [
+          "#090b0f",
+          "#23272d",
+          "#40454e",
+          "#5f6771",
+          "#828a95",
+          "#a8aeb8",
+          "#ccd1d9",
+          "#ebeff4"
+        ]
+      },
+      "highlight": {
+        "role": "tertiary",
+        "displayName": "Index Highlight",
+        "canonical": "#f1e2ae",
+        "tonalRamp": [
+          "#0f0b01",
+          "#2d260c",
+          "#4f4421",
+          "#726638",
+          "#95895e",
+          "#b8ae8a",
+          "#d9d1b5",
+          "#f4efda"
+        ]
+      },
+      "link": {
+        "role": "tertiary",
+        "displayName": "Catalog Blue",
+        "canonical": "#2c5aa0",
+        "tonalRamp": [
+          "#010a20",
+          "#0d254a",
+          "#224478",
+          "#3a65a9",
+          "#5f8acc",
+          "#8bb0e7",
+          "#b6d3ff",
+          "#dbf0ff"
+        ]
+      },
+      "focus-dark": {
+        "role": "tertiary",
+        "displayName": "Catalog Blue (dark ground)",
+        "canonical": "#8fb3ff",
+        "tonalRamp": [
+          "#030a1f",
+          "#152449",
+          "#2c4376",
+          "#4663a5",
+          "#6988c9",
+          "#93aee5",
+          "#bcd1fd",
+          "#dfefff"
+        ]
+      },
+      "verdict-pass": {
+        "role": "status",
+        "displayName": "Verdict Green",
+        "canonical": "#2f6b45",
+        "tonalRamp": [
+          "#010f05",
+          "#0d2e1a",
+          "#235033",
+          "#3c744f",
+          "#629773",
+          "#8fba9b",
+          "#b9dbc2",
+          "#ddf6e4"
+        ]
+      },
+      "verdict-partial": {
+        "role": "status",
+        "displayName": "Verdict Amber",
+        "canonical": "#8a5a00",
+        "tonalRamp": [
+          "#160700",
+          "#392000",
+          "#603c00",
+          "#895b10",
+          "#ac8042",
+          "#cda776",
+          "#eacca6",
+          "#ffebcf"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Welcome headline and results title."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The asked question atop each turn."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Catalog card page title."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Answers and intros, 66-72ch."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Card sections, notes, fine print."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase heading naming a set: drawer groups, card rail, sample label, table heads."
+      },
+      "call-number": {
+        "displayName": "Call Number",
+        "purpose": "Mono identifiers only: call numbers, card marks, model names, IDs."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 1px 2px rgb(29 37 51 / 8%), 0 3px 10px rgb(29 37 51 / 6%)",
+        "purpose": "Every catalog card at rest."
+      },
+      {
+        "name": "card-pulled",
+        "value": "0 6px 12px rgb(29 37 51 / 12%), 0 16px 32px rgb(29 37 51 / 10%)",
+        "purpose": "The card the visitor pulled."
+      },
+      {
+        "name": "card-rest-dark",
+        "value": "0 1px 2px rgb(0 0 0 / 40%), 0 3px 10px rgb(0 0 0 / 30%)",
+        "purpose": "Card at rest on the dark ground."
+      },
+      {
+        "name": "card-pulled-dark",
+        "value": "0 6px 14px rgb(0 0 0 / 50%), 0 16px 32px rgb(0 0 0 / 40%)",
+        "purpose": "Pulled card on the dark ground."
+      },
+      {
+        "name": "plate-inset",
+        "value": "inset 0 0 0 1px color-mix(in srgb, #b8924a 40%, transparent)",
+        "purpose": "Inner bevel of the brass label plate."
+      }
+    ],
+    "motion": [
+      {
+        "name": "card-pull",
+        "value": "transform .45s cubic-bezier(.16, 1, .3, 1), box-shadow .45s cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Card pull: translateX(-14px) plus lift on desktop, translateY(-4px) under 900px; then scroll to center and focus."
+      },
+      {
+        "name": "loading-slide",
+        "value": "1.1s ease-in-out infinite alternate",
+        "purpose": "Brass segment in the loading bar, only while a request runs."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none",
+        "purpose": "All motion off under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "620px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      },
+      {
+        "name": "frame",
+        "value": "1240px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Search Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action inside the composer field.",
+      "html": "<button class=\"ds-btn-primary\">Search</button>",
+      "css": ".ds-btn-primary{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#2f3a36;color:#eef0ea;border:0;border-radius:5px;padding:8px 18px;font-weight:700;font-size:17px;cursor:pointer} .ds-btn-primary:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px} .ds-btn-primary:disabled{opacity:.5;cursor:default}"
+    },
+    {
+      "name": "Ghost Button on Steel",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Header actions (New search, Ask a question, audited score).",
+      "html": "<div class=\"ds-steel\"><button class=\"ds-btn-ghost\">New search</button> <a class=\"ds-btn-ghost\" href=\"#\">Audited · <b>87% correct</b></a></div>",
+      "css": ".ds-steel{background:#2f3a36;padding:12px 20px;display:flex;gap:10px} .ds-btn-ghost{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#eef0ea;background:transparent;border:1px solid #c3cbc4;border-radius:4px;padding:6px 12px;font-size:14px;line-height:1.4;text-decoration:none;cursor:pointer} .ds-btn-ghost b{color:#ecd39d} .ds-btn-ghost:hover{background:#3d4a45} .ds-btn-ghost:focus-visible{outline:2px solid #ecd39d;outline-offset:2px}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Suggested follow-up question on card stock.",
+      "html": "<button class=\"ds-chip\">How much parental leave do I get?</button>",
+      "css": ".ds-chip{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#f6f6f1;color:#1d2533;border:1px solid #c9cbc2;border-radius:4px;padding:7px 12px;font-size:15px;cursor:pointer} .ds-chip:hover{border-color:#4a5462} .ds-chip:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px}"
+    },
+    {
+      "name": "Composer Field",
+      "kind": "input",
+      "refersTo": "composer-field",
+      "description": "Sticky question field with the Search button inside.",
+      "html": "<div class=\"ds-field\"><textarea rows=\"1\" aria-label=\"Your question\" placeholder=\"Ask about time off, benefits, expenses, travel or equity\"></textarea><button>Search</button></div>",
+      "css": ".ds-field{display:flex;align-items:flex-end;gap:10px;background:#fff;border:2px solid #2f3a36;border-radius:8px;padding:8px 8px 8px 14px;max-width:560px} .ds-field:focus-within{border-color:#2c5aa0} .ds-field textarea{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;flex:1;resize:none;border:0;outline:none;background:transparent;color:#1d2533;font-size:17px;line-height:1.5;padding:6px 0} .ds-field textarea::placeholder{color:#4a5462;opacity:1} .ds-field button{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#2f3a36;color:#eef0ea;border:0;border-radius:5px;padding:8px 18px;font-weight:700;font-size:17px}"
+    },
+    {
+      "name": "Drawer Header",
+      "kind": "nav",
+      "refersTo": "drawer-header",
+      "description": "Sticky steel drawer front with the brass label plate.",
+      "html": "<header class=\"ds-drawer\"><span class=\"ds-plate\">Handbook Assistant</span><span class=\"ds-scope\">48 GitLab Handbook pages · people policies</span></header>",
+      "css": ".ds-drawer{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;display:flex;align-items:center;gap:14px;background:#2f3a36;border-bottom:3px solid color-mix(in srgb,#2f3a36 70%,black);padding:12px 20px} .ds-plate{background:#f6f6f1;color:#1d2533;border:3px solid #b8924a;border-radius:3px;padding:3px 14px;font-weight:700;font-size:18px;box-shadow:inset 0 0 0 1px color-mix(in srgb,#b8924a 40%,transparent)} .ds-scope{color:#c3cbc4;font-size:14px}"
+    },
+    {
+      "name": "Catalog Card",
+      "kind": "card",
+      "refersTo": "catalog-card",
+      "description": "A source passage: call number, title, section, ruled excerpt with the cited sentence highlighted. Hover previews the pulled state.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-call\"><span>№ 1</span><span>FINANCE / EXPENSES</span></div><p class=\"ds-title\">Global Travel and Expense Policy</p><p class=\"ds-sec\">§ Co-Working Space - Monthly</p><blockquote>Pre-Approval is needed prior to submitting claims. <mark>$700.00 Limit per month.</mark></blockquote></article>",
+      "css": ".ds-card{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#f6f6f1;border:1px solid #c9cbc2;border-top:4px solid #b03524;border-radius:0 0 3px 3px;padding:12px 18px 14px;max-width:420px;box-shadow:0 1px 2px rgb(29 37 51 / 8%),0 3px 10px rgb(29 37 51 / 6%);transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1)} .ds-card:hover{transform:translateX(-14px);box-shadow:0 6px 12px rgb(29 37 51 / 12%),0 16px 32px rgb(29 37 51 / 10%)} .ds-call{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:500;line-height:1.4;color:#b03524;border-bottom:1px solid #c9cbc2;padding-bottom:6px;margin-bottom:8px} .ds-title{margin:0;font-size:16px;font-weight:700} .ds-sec{margin:0 0 6px;font-size:14px;color:#4a5462} .ds-card blockquote{margin:0;font-size:15px;line-height:27px;background-image:repeating-linear-gradient(to bottom,transparent 0 26px,#dbe3ef 26px 27px)} .ds-card mark{background:#f1e2ae;color:inherit;padding:1px 2px;border-radius:2px} @media (prefers-reduced-motion:reduce){.ds-card{transition:none}}"
+    },
+    {
+      "name": "Card Mark",
+      "kind": "custom",
+      "refersTo": "card-mark",
+      "description": "Numbered mark inline in an answer; pressing it pulls the matching card.",
+      "html": "<p class=\"ds-answer\">Coworking space is capped at $700 a month <button class=\"ds-mark\" aria-label=\"Pull card 1\">1</button> and needs pre-approval <button class=\"ds-mark\" aria-label=\"Pull card 2\">2</button>.</p>",
+      "css": ".ds-answer{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fff;border:1px solid #c9cbc2;border-radius:6px;padding:20px 24px;font-size:17px;line-height:1.55;margin:0;max-width:72ch} .ds-mark{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:24px;padding:0 6px;margin:0 2px;font-size:13px;font-weight:500;line-height:1;color:#f6f6f1;background:#1d2533;border:0;border-radius:3px;vertical-align:1px;cursor:pointer} .ds-mark:hover{background:#b03524} .ds-mark:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px}"
+    },
+    {
+      "name": "Not Held Stamp",
+      "kind": "custom",
+      "refersTo": "answer-panel",
+      "description": "Refusal card for questions the collection does not cover.",
+      "html": "<div class=\"ds-nh\"><span class=\"ds-stamp\">Not held in this collection</span><p>The handbook pages in this catalog do not cover that question.</p></div>",
+      "css": ".ds-nh{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fff;border:1px solid #c9cbc2;border-radius:6px;padding:18px 22px;max-width:72ch} .ds-nh p{margin:0;color:#4a5462} .ds-stamp{display:inline-block;font-weight:700;font-size:13px;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:#b03524;border:2px solid #b03524;border-radius:3px;padding:6px 9px;margin-bottom:10px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Card Catalog",
+    "overview": "The interface is a library catalog cabinet. A steel-green drawer front runs across the top with a brass label holder carrying the product name; below it, on a pale cabinet ground, the visitor's question and the answer sit on the left and the catalog cards that answer drew on sit in a rail on the right. Every claim in an answer carries a small numbered mark, and pressing it pulls the matching card out of the rail. The card is where trust is earned: call number in mono, section, the exact sentence highlighted on ruled card stock, a link to the source.\n\nDensity is moderate and reading-first: one typeface family (Atkinson Hyperlegible) at a generous 17px body, hairlines rather than boxes to divide fields, and a single red top rule that identifies card stock at a glance. Light and dark are both first-class. Dark is the cabinet room with the lights down: the ground darkens, but the steel header, the brass and paper plate and the light card stock all stay, so cards keep reading as physical objects. The catalog stays literal and modern; there is no typewriter type and no paper texture.",
+    "keyCharacteristics": [
+      "Steel drawer-front header with a brass-bordered paper label plate.",
+      "Answers on white paper panels; sources on off-white card stock with a 4px red top rule.",
+      "Numbered ink marks in the answer that pull a card (slide left, lift, focus).",
+      "One family: Atkinson Hyperlegible for all text, its Mono only for call numbers, card marks and code.",
+      "Both schemes keep the materials; only the ground and the text set on it change."
+    ],
+    "rules": [
+      {
+        "name": "The Two Inks Rule",
+        "body": "Text on the ground uses ground-ink tokens; text on card stock or paper uses ink tokens. In dark mode these diverge, so never set ink directly on the ground or ground-ink on stock.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blue Means Go Rule",
+        "body": "Blue appears only on links and focus rings. Accent color for emphasis comes from red (source identity) or brass (holders and labels on steel).",
+        "section": "colors"
+      },
+      {
+        "name": "The Lights Down Rule",
+        "body": "Dark mode darkens the ground only. Steel, brass, paper and card stock stay light enough that ink text on them is unchanged.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is A Stamp Rule",
+        "body": "Mono is for identifiers only: call numbers, card marks, model names and question IDs. Never for prose or headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Names A Set Rule",
+        "body": "Uppercase labels are headings for a group of things (a drawer, a rail of cards, a table column). They never sit above a larger headline as an eyebrow.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Cards Lift Rule",
+        "body": "Shadow belongs to catalog cards. Answer panels, drawer groups, chips and fields stay flat with a 1px hairline.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** give every sourced claim a numbered mark that pulls a catalog card; the card, not the answer, carries the evidence.",
+      "**Do** mark card stock with the 4px catalog-red top rule and divide its fields with 1px hairlines.",
+      "**Do** set text on the ground in ground-ink tokens and text on stock or paper in ink tokens.",
+      "**Do** keep steel, brass, paper and card stock unchanged in dark mode; darken only the ground.",
+      "**Do** use Atkinson Hyperlegible Mono only for call numbers, card marks, model names and IDs.",
+      "**Do** reserve blue for links and focus rings."
+    ],
+    "donts": [
+      "**Don't** put answers in chat bubbles or a centered chat column; answers sit on paper panels beside the card rail.",
+      "**Don't** add shadows to panels, chips or fields; only catalog cards lift.",
+      "**Don't** add typewriter type or paper texture to the catalog.",
+      "**Don't** set an uppercase label above a larger headline as an eyebrow.",
+      "**Don't** use GitLab logos, wordmarks or brand colors."
+    ]
+  }
+}

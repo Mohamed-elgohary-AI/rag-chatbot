@@ -1,0 +1,23 @@
+# Human review of the LLM judge's verdicts (2026-11-24).
+# Every verdict in eval/results/baseline.jsonl and final.jsonl was read against the gold answer and the handbook text.
+# Rule used for every override:
+#   correct   = facts right and supported by the handbook
+#   partial   = main answer right, but part of the question is missing, or some claims are cited to a passage that doesn't contain them
+#   incorrect = main point wrong or contradicts the handbook
+# Only these verdicts were changed; all others were checked and left as the judge gave them.
+
+baseline:
+  A17:
+    verdict: partial
+    note: Main step right (email panic@gitlab.com). The extra IT steps are true elsewhere in the handbook but are cited to a passage that doesn't contain them.
+  M04:
+    verdict: partial
+    note: Both facts right (coverage ends at the end of the month; 90 days is the handbook's three months), but the option window is cited to a passage that doesn't contain it.
+
+final:
+  A14:
+    verdict: correct
+    note: Matches the expense policy. The $100 cap and itemized receipt are in the cited section, and "not the family-plan share" agrees with "only the employee's portion of a family plan is reimbursable". The judge misread it.
+  M01:
+    verdict: partial
+    note: Notice rule right, but it misses the special permission needed beyond 25 consecutive days. Unlike the baseline it doesn't claim only the manager approves.

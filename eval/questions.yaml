@@ -1,0 +1,179 @@
+# Test set for the GitLab Handbook chatbot. Frozen on 2026-11-24, before any tuning.
+# Every gold answer was taken from the pinned handbook pages in data/raw/ (commit 1829d4ae).
+# Unanswerable questions were checked by searching data/raw/ for their key terms (0 relevant hits).
+#
+# pages: handbook paths (as in data/SOURCES.md, without .md/_index). A citation counts as correct
+# when it points to any of them.
+
+answerable:
+  - id: A01
+    question: How much notice should I give my manager before taking PTO?
+    gold: At least twice as many days as the planned time off (for example, 6 business days' notice for 3 days off), and as much notice as possible.
+    pages: [people-group/time-off-and-absence/time-off-types]
+  - id: A02
+    question: Is there a limit on how much PTO I can take?
+    gold: There is no set yearly limit, but time off longer than 25 consecutive calendar days needs special permission from your manager, People Business Partner and the Absence Management team.
+    pages: [people-group/time-off-and-absence/time-off-types]
+  - id: A03
+    question: What happens if I'm off sick for more than 6 consecutive days?
+    gold: It becomes a leave of absence. In the US you submit a leave request in Tilt; elsewhere you notify the Absence Management team with a Compass ticket and record the time as "Out Sick" in Workday.
+    pages: [people-group/time-off-and-absence/time-off-types]
+  - id: A04
+    question: How many days of jury duty does GitLab pay for?
+    gold: Up to the equivalent of 25 full working days, paid at the usual rate (100% of weekly wages); longer absences are reviewed case by case.
+    pages: [people-group/time-off-and-absence/time-off-types]
+  - id: A05
+    question: How long is GitLab's parental leave, and by when do I have to use it?
+    gold: 16 weeks of paid parental leave, to be used before the child's first birthday (or the first anniversary of the adoption, foster placement or surrogacy birth).
+    pages: [people-group/time-off-and-absence/leave-types]
+  - id: A06
+    question: Can I come back from parental leave at reduced hours?
+    gold: Yes, you can return at 50% capacity, agreed with your manager; the guideline is two to four weeks and it is not tracked in Workday.
+    pages: [people-group/time-off-and-absence/leave-types]
+  - id: A07
+    question: How long do reinstatement rights last after military service?
+    gold: Up to 2 years after the military service ends.
+    pages: [people-group/time-off-and-absence/leave-types]
+  - id: A08
+    question: How far in advance should I book flights for business travel?
+    gold: Ideally at least 14 days ahead for domestic flights and 21 days ahead for international flights.
+    pages: [finance/expenses]
+  - id: A09
+    question: Can I book business class for a long domestic flight?
+    gold: No. For domestic flights where each segment is over 5 hours you may book the next class up from standard economy, but it must be below business class.
+    pages: [finance/expenses]
+  - id: A10
+    question: What is the daily meal limit when I travel for work?
+    gold: Up to $120 USD (or local equivalent) per day.
+    pages: [finance/expenses]
+  - id: A11
+    question: How much can I expense for internet access while traveling?
+    gold: Up to $50 USD (or local equivalent) per day.
+    pages: [finance/expenses]
+  - id: A12
+    question: Can I expense a coworking space, and what is the limit?
+    gold: Yes, with pre-approval, up to $700 per month; it must be a professionally managed coworking space within commuting distance (about 50 km) of your primary residence, except day passes during business travel.
+    pages: [finance/expenses]
+  - id: A13
+    question: How much can I spend on business cards?
+    gold: Up to $150 per quarter, ordered through Moo; more than that needs your manager's approval by email.
+    pages: [finance/expenses]
+  - id: A14
+    question: Can I expense my monthly mobile phone bill?
+    gold: Monthly cell phone service charges are reimbursable only for team members whose phones are vital to their position; the phone itself, accessories and hardware costs are not reimbursable.
+    pages: [finance/expenses]
+  - id: A15
+    question: When should I submit my final expenses before leaving GitLab?
+    gold: At least one week before your departure date, as a final expense report in Navan (employees) or with the final invoice (contractors).
+    pages: [people-group/offboarding/faq]
+  - id: A16
+    question: When does my US medical coverage end after I leave GitLab?
+    gold: US medical, dental and vision coverage ends at the end of the month you leave; other benefits end on your last day.
+    pages: [people-group/offboarding/faq]
+  - id: A17
+    question: I lost my work laptop. What should I do?
+    gold: Email panic@gitlab.com right away so the security and production teams can respond immediately.
+    pages: [people-group/acceptable-use-policy]
+  - id: A18
+    question: Can I read work email on my personal phone?
+    gold: Personal phones and tablets may access GitLab-managed data such as email if they are passcode-enabled, with 2FA enforced; non-company devices are otherwise not permitted, and RED data is always prohibited.
+    pages: [people-group/acceptable-use-policy]
+  - id: A19
+    question: How long is the probation period at GitLab?
+    gold: It depends on location, between 1 and 9 months; team members who relocate with continuous service and have already passed probation don't repeat it.
+    pages: [people-group/contracts-probation-periods]
+  - id: A20
+    question: Do I need approval before starting a side project?
+    gold: Yes. You must disclose outside activities (paid or unpaid) in writing to your manager before starting; approval is refused if it is a conflict of interest or would affect your ability to do your job.
+    pages: [people-group/contracts-probation-periods]
+  - id: A21
+    question: What anniversary gift do I get after five years at GitLab?
+    gold: The option of a GitLab-branded computer backpack.
+    pages: [people-group/celebrations]
+  - id: A22
+    question: How much does GitLab match on the US 401(k)?
+    gold: 50% of contributions on the first 6% of earnings, up to $1,500 a year, with immediate eligibility and vesting.
+    pages: [total-rewards/benefits/general-and-entity-benefits/inc-benefits-us]
+  - id: A23
+    question: I'm in the US and already have medical coverage through my spouse. Can I opt out of GitLab's medical plan?
+    gold: Yes. If you actively waive medical coverage in PlanSource you receive a $150 monthly allowance and can still enroll in dental, vision and other benefits.
+    pages: [total-rewards/benefits/general-and-entity-benefits/inc-benefits-us]
+  - id: A24
+    question: Who is automatically enrolled in the UK pension scheme?
+    gold: Team members who earn over £10,000 a year, are aged 22 or over and are under State Pension Age are automatically enrolled in the Scottish Widows Group Personal Pension Plan.
+    pages: [total-rewards/benefits/general-and-entity-benefits/ltd-benefits-uk]
+  - id: A25
+    question: Do team members in Belgium get meal vouchers?
+    gold: Yes, since 2026-03-01 all Belgium-based team members get meal vouchers, prorated by the days worked in the previous month.
+    pages: [total-rewards/benefits/general-and-entity-benefits/bv-benefits-belgium]
+  - id: A26
+    question: How much does GitLab contribute to KiwiSaver in New Zealand?
+    gold: 3% of base salary, paid on top of salary; team members are enrolled automatically and can opt out within the first 56 days.
+    pages: [total-rewards/benefits/general-and-entity-benefits/pty-benefits-new-zealand]
+  - id: A27
+    question: How many Modern Health therapy sessions do I get, and can my family use it?
+    gold: 6 free therapy sessions and 6 free coaching sessions per year; eligible family members include a spouse or partner and children (and partner's children) up to age 27.
+    pages: [total-rewards/benefits/modern-health]
+  - id: A28
+    question: How much is the referral bonus, and when is it paid?
+    gold: A flat $1,500 for a new hire, paid once the new team member has been employed for 3 months.
+    pages: [total-rewards/incentives]
+  - id: A29
+    question: How long do I have to exercise my vested stock options after leaving GitLab?
+    gold: Three months; vested options not exercised in that window are lost.
+    pages: [total-rewards/stock-options]
+  - id: A30
+    question: When are ESPP shares purchased?
+    gold: On the purchase date at the end of each purchase period, normally May 31 and November 30; only whole shares are bought.
+    pages: [total-rewards/stock-options]
+  - id: A31
+    question: Does GitLab sponsor US H-1B visas?
+    gold: No. The US H-1B (and H-1B1) is on the list of visas GitLab does not sponsor.
+    pages: [people-group/visas]
+  - id: A32
+    question: How is compa-ratio calculated?
+    gold: Salary divided by the midpoint of the compensation range; for example $90,000 with a $100,000 midpoint is 0.90.
+    pages: [total-rewards/compensation]
+  - id: A33
+    question: What does GitLab give new parents besides leave?
+    gold: A GitLab-branded new parent swag bundle (teething ring, baby socks, plush tag blanket, adult socks, baby bib and baby blanket).
+    pages: [people-group/celebrations]
+  # Multi-part: need two sections or two pages
+  - id: M01
+    question: I want to take 30 days off in a row. How much notice do I need, and whose approval?
+    gold: Notice of at least twice the time off (so about 60 days) and as much as possible, and because it is longer than 25 consecutive calendar days it needs special permission from your manager, People Business Partner and the Absence Management team.
+    pages: [people-group/time-off-and-absence/time-off-types]
+  - id: M02
+    question: On a business trip where I stay with family instead of a hotel, what can I expense for meals and for my hosts?
+    gold: Meals up to $120 USD per day, plus a host or hostess gift of up to $50.
+    pages: [finance/expenses]
+  - id: M03
+    question: How much can I spend on a regular bike through the bike-to-work scheme in Ireland compared with the Netherlands?
+    gold: Ireland allows up to EUR 1,250 for a regular bike (once every 4 years); the Netherlands allows up to EUR 2,000 for a bike purchase (every 2 years).
+    pages: [total-rewards/benefits/general-and-entity-benefits/gitlab-ireland-ltd, total-rewards/benefits/general-and-entity-benefits/bv-benefits-netherlands]
+  - id: M04
+    question: If I leave GitLab in the US, when does my medical coverage end and how long do I have to exercise my vested options?
+    gold: Medical coverage ends at the end of the month you leave, and you have three months to exercise vested options.
+    pages: [people-group/offboarding/faq, total-rewards/stock-options]
+  - id: M05
+    question: I'm a new father in Singapore. How much paternity leave can I get in total, and by when must GitLab's parental leave be used?
+    gold: 4 weeks of government-paid paternity leave, up to 16 weeks in total combined with GitLab Parental Leave, which must be used before the child's first birthday.
+    pages: [total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd, people-group/time-off-and-absence/leave-types]
+  - id: M06
+    question: I'm relocating to another country with GitLab after passing probation. Do I need a new probation period, and can I expense the relocation costs?
+    gold: No new probation is needed if your service is continuous and you already passed probation, and relocation costs (and visa costs for work authorization) cannot be expensed.
+    pages: [people-group/contracts-probation-periods, people-group/visas]
+
+unanswerable:
+  - {id: U01, question: "What is the dress code for in-person customer meetings?"}
+  - {id: U02, question: "How do I book a meeting room at a GitLab office?"}
+  - {id: U03, question: "Does GitLab offer a four-day work week?"}
+  - {id: U04, question: "What is GitLab's policy on romantic relationships between coworkers?"}
+  - {id: U05, question: "When is the deadline for submitting my annual performance self-review?"}
+  - {id: U06, question: "Does GitLab pay a sign-on bonus to new hires?"}
+  - {id: U07, question: "How much paid sabbatical leave do team members get after five years at GitLab?"}
+  - {id: U08, question: "What is the salary range for a Senior Backend Engineer in London?"}
+  - {id: U09, question: "Does GitLab run an annual company hackathon with prizes?"}
+  - {id: U10, question: "What is GitLab's stock price today?"}
+  - {id: U11, question: "What is the smoking policy at company events?"}
+  - {id: U12, question: "What prize does the Employee of the Month receive?"}

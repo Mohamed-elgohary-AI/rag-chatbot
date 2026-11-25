@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handbook Assistant</title>
+  <meta name="description" content="Ask about GitLab's people policies. Every answer points to the handbook passage behind it, and it says so when the handbook doesn't cover a question.">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="drawer">
+    <a class="holder" href="/" aria-label="Handbook Assistant, start a new search">
+      <span class="plate">Handbook Assistant</span>
+      <span class="scope">48 GitLab Handbook pages · people policies</span>
+    </a>
+    <nav class="drawer-actions" aria-label="Page">
+      <a class="audit" id="audit" href="/results" hidden></a>
+      <button type="button" class="ghost" id="new-search" hidden>New search</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+      <div class="intro">
+        <h1 id="welcome-title">Ask the handbook. Pull the card behind every answer.</h1>
+        <p>Answers come only from 48 pages of the public GitLab Handbook. Each claim is numbered to the catalog card it came from, so you can check the exact sentence. If the handbook doesn't cover your question, it says so instead of guessing.</p>
+      </div>
+      <div class="drawers" id="drawers"></div>
+      <aside class="sample" aria-label="Example of a catalog card">
+        <h2 class="label">Every claim comes with a card like this</h2>
+        <article class="card pulled">
+          <div class="call"><span>№ 1</span><span class="path">FINANCE / EXPENSES</span></div>
+          <p class="card-title">Global Travel and Expense Policy</p>
+          <p class="section">§ Co-Working Space - Monthly</p>
+          <blockquote>Coworking space is reimbursable for monthly space and one-off days during business travel. Pre-Approval is needed prior to submitting claims. <mark>$700.00 Limit per month.</mark> The space should be located within a commutable distance (+-50km) of the Team Member's primary residence… </blockquote>
+          <a class="open" href="https://handbook.gitlab.com/handbook/finance/expenses/#co-working-space---monthly" target="_blank" rel="noopener">Open in the handbook<svg class="ext" aria-hidden="true" viewBox="0 0 16 16" width="12" height="12"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+      </aside>
+    </section>
+    <div id="thread"></div>
+  </main>
+
+  <form class="composer" id="composer">
+    <label class="sr-only" for="q">Your question</label>
+    <div class="field">
+      <textarea id="q" rows="1" maxlength="500" placeholder="Ask about time off, benefits, expenses, travel or equity" required></textarea>
+      <button type="submit" id="send">Search</button>
+    </div>
+    <p class="fineprint"><span id="count" hidden></span>Not affiliated with GitLab. Handbook content © GitLab, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Answers can be wrong; check the card.</p>
+  </form>
+
+  <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+  <script src="/static/app.js"></script>
+</body>
+</html>
