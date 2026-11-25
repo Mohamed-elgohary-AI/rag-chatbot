@@ -7,7 +7,7 @@
       "steel": {
         "role": "primary",
         "displayName": "Drawer Steel",
-        "canonical": "#2f3a36",
+        "canonical": "#1f2d4a",
         "tonalRamp": [
           "#090c0b",
           "#222826",
@@ -22,7 +22,7 @@
       "steel-raised": {
         "role": "primary",
         "displayName": "Raised Steel",
-        "canonical": "#3d4a45",
+        "canonical": "#2c3d5f",
         "tonalRamp": [
           "#080c0b",
           "#212826",
@@ -37,7 +37,7 @@
       "steel-ink": {
         "role": "neutral",
         "displayName": "Steel Ink",
-        "canonical": "#eef0ea",
+        "canonical": "#f3f1ea",
         "tonalRamp": [
           "#0b0b0a",
           "#262724",
@@ -52,7 +52,7 @@
       "steel-ink-muted": {
         "role": "neutral",
         "displayName": "Steel Ink Muted",
-        "canonical": "#c3cbc4",
+        "canonical": "#c5cbd8",
         "tonalRamp": [
           "#0a0c0a",
           "#242824",
@@ -127,7 +127,7 @@
       "ground": {
         "role": "neutral",
         "displayName": "Ground",
-        "canonical": "#eceee8",
+        "canonical": "#f4f1ea",
         "tonalRamp": [
           "#0b0b0a",
           "#262724",
@@ -142,7 +142,7 @@
       "ground-dark": {
         "role": "neutral",
         "displayName": "Ground (dark)",
-        "canonical": "#151a18",
+        "canonical": "#10141d",
         "tonalRamp": [
           "#0a0c0b",
           "#242726",
@@ -172,7 +172,7 @@
       "ground-ink-dark": {
         "role": "neutral",
         "displayName": "Ground Ink (dark)",
-        "canonical": "#e9ece5",
+        "canonical": "#ebe8e0",
         "tonalRamp": [
           "#0b0b0a",
           "#262724",
@@ -202,7 +202,7 @@
       "ground-ink-muted-dark": {
         "role": "neutral",
         "displayName": "Ground Ink Muted (dark)",
-        "canonical": "#b4bcb3",
+        "canonical": "#b9bdc7",
         "tonalRamp": [
           "#0a0c09",
           "#242823",
@@ -217,7 +217,7 @@
       "ground-hair": {
         "role": "neutral",
         "displayName": "Ground Hair",
-        "canonical": "#c9cbc2",
+        "canonical": "#d8d2c4",
         "tonalRamp": [
           "#0b0b09",
           "#262723",
@@ -232,7 +232,7 @@
       "ground-hair-dark": {
         "role": "neutral",
         "displayName": "Ground Hair (dark)",
-        "canonical": "#39433f",
+        "canonical": "#2c3444",
         "tonalRamp": [
           "#090c0b",
           "#222826",
@@ -247,7 +247,7 @@
       "card-stock": {
         "role": "neutral",
         "displayName": "Card Stock",
-        "canonical": "#f6f6f1",
+        "canonical": "#fbf9f4",
         "tonalRamp": [
           "#0b0b0a",
           "#272724",
@@ -262,7 +262,7 @@
       "card-stock-dark": {
         "role": "neutral",
         "displayName": "Card Stock (dark)",
-        "canonical": "#dddfd5",
+        "canonical": "#e6e2d8",
         "tonalRamp": [
           "#0b0b09",
           "#262722",
@@ -292,7 +292,7 @@
       "paper-dark": {
         "role": "neutral",
         "displayName": "Paper (dark)",
-        "canonical": "#e5e6de",
+        "canonical": "#eeebe3",
         "tonalRamp": [
           "#0b0b09",
           "#262723",
@@ -337,7 +337,7 @@
       "ink-muted-dark": {
         "role": "neutral",
         "displayName": "Ink Muted (dark)",
-        "canonical": "#414b58",
+        "canonical": "#474f5c",
         "tonalRamp": [
           "#080b0f",
           "#21272e",
@@ -352,7 +352,7 @@
       "hair": {
         "role": "neutral",
         "displayName": "Hair",
-        "canonical": "#c9cbc2",
+        "canonical": "#d8d2c4",
         "tonalRamp": [
           "#0b0b09",
           "#262723",
@@ -367,7 +367,7 @@
       "hair-dark": {
         "role": "neutral",
         "displayName": "Hair (dark)",
-        "canonical": "#b7b9b0",
+        "canonical": "#c4bfb3",
         "tonalRamp": [
           "#0b0b09",
           "#262723",
@@ -581,7 +581,7 @@
       "refersTo": "button-primary",
       "description": "Primary action inside the composer field.",
       "html": "<button class=\"ds-btn-primary\">Search</button>",
-      "css": ".ds-btn-primary{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#2f3a36;color:#eef0ea;border:0;border-radius:5px;padding:8px 18px;font-weight:700;font-size:17px;cursor:pointer} .ds-btn-primary:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px} .ds-btn-primary:disabled{opacity:.5;cursor:default}"
+      "css": ".ds-btn-primary{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#1f2d4a;color:#f3f1ea;border:0;border-radius:5px;padding:8px 18px;font-weight:700;font-size:17px;cursor:pointer} .ds-btn-primary:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px} .ds-btn-primary:disabled{opacity:.5;cursor:default}"
     },
     {
       "name": "Ghost Button on Steel",
@@ -589,7 +589,7 @@
       "refersTo": "button-ghost",
       "description": "Header actions (New search, Ask a question, audited score).",
       "html": "<div class=\"ds-steel\"><button class=\"ds-btn-ghost\">New search</button> <a class=\"ds-btn-ghost\" href=\"#\">Audited · <b>87% correct</b></a></div>",
-      "css": ".ds-steel{background:#2f3a36;padding:12px 20px;display:flex;gap:10px} .ds-btn-ghost{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#eef0ea;background:transparent;border:1px solid #c3cbc4;border-radius:4px;padding:6px 12px;font-size:14px;line-height:1.4;text-decoration:none;cursor:pointer} .ds-btn-ghost b{color:#ecd39d} .ds-btn-ghost:hover{background:#3d4a45} .ds-btn-ghost:focus-visible{outline:2px solid #ecd39d;outline-offset:2px}"
+      "css": ".ds-steel{background:#1f2d4a;padding:12px 20px;display:flex;gap:10px} .ds-btn-ghost{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#f3f1ea;background:transparent;border:1px solid #c5cbd8;border-radius:4px;padding:6px 12px;font-size:14px;line-height:1.4;text-decoration:none;cursor:pointer} .ds-btn-ghost b{color:#ecd39d} .ds-btn-ghost:hover{background:#2c3d5f} .ds-btn-ghost:focus-visible{outline:2px solid #ecd39d;outline-offset:2px}"
     },
     {
       "name": "Chip",
@@ -597,7 +597,7 @@
       "refersTo": "chip",
       "description": "Suggested follow-up question on card stock.",
       "html": "<button class=\"ds-chip\">How much parental leave do I get?</button>",
-      "css": ".ds-chip{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#f6f6f1;color:#1d2533;border:1px solid #c9cbc2;border-radius:4px;padding:7px 12px;font-size:15px;cursor:pointer} .ds-chip:hover{border-color:#4a5462} .ds-chip:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px}"
+      "css": ".ds-chip{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#fbf9f4;color:#1d2533;border:1px solid #d8d2c4;border-radius:4px;padding:7px 12px;font-size:15px;cursor:pointer} .ds-chip:hover{border-color:#4a5462} .ds-chip:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px}"
     },
     {
       "name": "Composer Field",
@@ -605,7 +605,7 @@
       "refersTo": "composer-field",
       "description": "Sticky question field with the Search button inside.",
       "html": "<div class=\"ds-field\"><textarea rows=\"1\" aria-label=\"Your question\" placeholder=\"Ask about time off, benefits, expenses, travel or equity\"></textarea><button>Search</button></div>",
-      "css": ".ds-field{display:flex;align-items:flex-end;gap:10px;background:#fff;border:2px solid #2f3a36;border-radius:8px;padding:8px 8px 8px 14px;max-width:560px} .ds-field:focus-within{border-color:#2c5aa0} .ds-field textarea{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;flex:1;resize:none;border:0;outline:none;background:transparent;color:#1d2533;font-size:17px;line-height:1.5;padding:6px 0} .ds-field textarea::placeholder{color:#4a5462;opacity:1} .ds-field button{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#2f3a36;color:#eef0ea;border:0;border-radius:5px;padding:8px 18px;font-weight:700;font-size:17px}"
+      "css": ".ds-field{display:flex;align-items:flex-end;gap:10px;background:#fff;border:2px solid #1f2d4a;border-radius:8px;padding:8px 8px 8px 14px;max-width:560px} .ds-field:focus-within{border-color:#2c5aa0} .ds-field textarea{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;flex:1;resize:none;border:0;outline:none;background:transparent;color:#1d2533;font-size:17px;line-height:1.5;padding:6px 0} .ds-field textarea::placeholder{color:#4a5462;opacity:1} .ds-field button{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;background:#1f2d4a;color:#f3f1ea;border:0;border-radius:5px;padding:8px 18px;font-weight:700;font-size:17px}"
     },
     {
       "name": "Drawer Header",
@@ -613,7 +613,7 @@
       "refersTo": "drawer-header",
       "description": "Sticky steel drawer front with the brass label plate.",
       "html": "<header class=\"ds-drawer\"><span class=\"ds-plate\">Handbook Assistant</span><span class=\"ds-scope\">48 GitLab Handbook pages · people policies</span></header>",
-      "css": ".ds-drawer{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;display:flex;align-items:center;gap:14px;background:#2f3a36;border-bottom:3px solid color-mix(in srgb,#2f3a36 70%,black);padding:12px 20px} .ds-plate{background:#f6f6f1;color:#1d2533;border:3px solid #b8924a;border-radius:3px;padding:3px 14px;font-weight:700;font-size:18px;box-shadow:inset 0 0 0 1px color-mix(in srgb,#b8924a 40%,transparent)} .ds-scope{color:#c3cbc4;font-size:14px}"
+      "css": ".ds-drawer{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;display:flex;align-items:center;gap:14px;background:#1f2d4a;border-bottom:3px solid color-mix(in srgb,#1f2d4a 70%,black);padding:12px 20px} .ds-plate{background:#fbf9f4;color:#1d2533;border:3px solid #b8924a;border-radius:3px;padding:3px 14px;font-weight:700;font-size:18px;box-shadow:inset 0 0 0 1px color-mix(in srgb,#b8924a 40%,transparent)} .ds-scope{color:#c5cbd8;font-size:14px}"
     },
     {
       "name": "Catalog Card",
@@ -621,7 +621,7 @@
       "refersTo": "catalog-card",
       "description": "A source passage: call number, title, section, ruled excerpt with the cited sentence highlighted. Hover previews the pulled state.",
       "html": "<article class=\"ds-card\"><div class=\"ds-call\"><span>№ 1</span><span>FINANCE / EXPENSES</span></div><p class=\"ds-title\">Global Travel and Expense Policy</p><p class=\"ds-sec\">§ Co-Working Space - Monthly</p><blockquote>Pre-Approval is needed prior to submitting claims. <mark>$700.00 Limit per month.</mark></blockquote></article>",
-      "css": ".ds-card{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#f6f6f1;border:1px solid #c9cbc2;border-top:4px solid #b03524;border-radius:0 0 3px 3px;padding:12px 18px 14px;max-width:420px;box-shadow:0 1px 2px rgb(29 37 51 / 8%),0 3px 10px rgb(29 37 51 / 6%);transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1)} .ds-card:hover{transform:translateX(-14px);box-shadow:0 6px 12px rgb(29 37 51 / 12%),0 16px 32px rgb(29 37 51 / 10%)} .ds-call{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:500;line-height:1.4;color:#b03524;border-bottom:1px solid #c9cbc2;padding-bottom:6px;margin-bottom:8px} .ds-title{margin:0;font-size:16px;font-weight:700} .ds-sec{margin:0 0 6px;font-size:14px;color:#4a5462} .ds-card blockquote{margin:0;font-size:15px;line-height:27px;background-image:repeating-linear-gradient(to bottom,transparent 0 26px,#dbe3ef 26px 27px)} .ds-card mark{background:#f1e2ae;color:inherit;padding:1px 2px;border-radius:2px} @media (prefers-reduced-motion:reduce){.ds-card{transition:none}}"
+      "css": ".ds-card{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fbf9f4;border:1px solid #d8d2c4;border-top:4px solid #b03524;border-radius:0 0 3px 3px;padding:12px 18px 14px;max-width:420px;box-shadow:0 1px 2px rgb(29 37 51 / 8%),0 3px 10px rgb(29 37 51 / 6%);transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1)} .ds-card:hover{transform:translateX(-14px);box-shadow:0 6px 12px rgb(29 37 51 / 12%),0 16px 32px rgb(29 37 51 / 10%)} .ds-call{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:500;line-height:1.4;color:#b03524;border-bottom:1px solid #d8d2c4;padding-bottom:6px;margin-bottom:8px} .ds-title{margin:0;font-size:16px;font-weight:700} .ds-sec{margin:0 0 6px;font-size:14px;color:#4a5462} .ds-card blockquote{margin:0;font-size:15px;line-height:27px;background-image:repeating-linear-gradient(to bottom,transparent 0 26px,#dbe3ef 26px 27px)} .ds-card mark{background:#f1e2ae;color:inherit;padding:1px 2px;border-radius:2px} @media (prefers-reduced-motion:reduce){.ds-card{transition:none}}"
     },
     {
       "name": "Card Mark",
@@ -629,7 +629,7 @@
       "refersTo": "card-mark",
       "description": "Numbered mark inline in an answer; pressing it pulls the matching card.",
       "html": "<p class=\"ds-answer\">Coworking space is capped at $700 a month <button class=\"ds-mark\" aria-label=\"Pull card 1\">1</button> and needs pre-approval <button class=\"ds-mark\" aria-label=\"Pull card 2\">2</button>.</p>",
-      "css": ".ds-answer{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fff;border:1px solid #c9cbc2;border-radius:6px;padding:20px 24px;font-size:17px;line-height:1.55;margin:0;max-width:72ch} .ds-mark{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:24px;padding:0 6px;margin:0 2px;font-size:13px;font-weight:500;line-height:1;color:#f6f6f1;background:#1d2533;border:0;border-radius:3px;vertical-align:1px;cursor:pointer} .ds-mark:hover{background:#b03524} .ds-mark:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px}"
+      "css": ".ds-answer{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fff;border:1px solid #d8d2c4;border-radius:6px;padding:20px 24px;font-size:17px;line-height:1.55;margin:0;max-width:72ch} .ds-mark{font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:24px;padding:0 6px;margin:0 2px;font-size:13px;font-weight:500;line-height:1;color:#fbf9f4;background:#1d2533;border:0;border-radius:3px;vertical-align:1px;cursor:pointer} .ds-mark:hover{background:#b03524} .ds-mark:focus-visible{outline:2px solid #2c5aa0;outline-offset:2px}"
     },
     {
       "name": "Not Held Stamp",
@@ -637,12 +637,12 @@
       "refersTo": "answer-panel",
       "description": "Refusal card for questions the collection does not cover.",
       "html": "<div class=\"ds-nh\"><span class=\"ds-stamp\">Not held in this collection</span><p>The handbook pages in this catalog do not cover that question.</p></div>",
-      "css": ".ds-nh{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fff;border:1px solid #c9cbc2;border-radius:6px;padding:18px 22px;max-width:72ch} .ds-nh p{margin:0;color:#4a5462} .ds-stamp{display:inline-block;font-weight:700;font-size:13px;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:#b03524;border:2px solid #b03524;border-radius:3px;padding:6px 9px;margin-bottom:10px}"
+      "css": ".ds-nh{font-family:\"Atkinson Hyperlegible\",system-ui,sans-serif;color:#1d2533;background:#fff;border:1px solid #d8d2c4;border-radius:6px;padding:18px 22px;max-width:72ch} .ds-nh p{margin:0;color:#4a5462} .ds-stamp{display:inline-block;font-weight:700;font-size:13px;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:#b03524;border:2px solid #b03524;border-radius:3px;padding:6px 9px;margin-bottom:10px}"
     }
   ],
   "narrative": {
     "northStar": "The Card Catalog",
-    "overview": "The interface is a library catalog cabinet. A steel-green drawer front runs across the top with a brass label holder carrying the product name; below it, on a pale cabinet ground, the visitor's question and the answer sit on the left and the catalog cards that answer drew on sit in a rail on the right. Every claim in an answer carries a small numbered mark, and pressing it pulls the matching card out of the rail. The card is where trust is earned: call number in mono, section, the exact sentence highlighted on ruled card stock, a link to the source.\n\nDensity is moderate and reading-first: one typeface family (Atkinson Hyperlegible) at a generous 17px body, hairlines rather than boxes to divide fields, and a single red top rule that identifies card stock at a glance. Light and dark are both first-class. Dark is the cabinet room with the lights down: the ground darkens, but the steel header, the brass and paper plate and the light card stock all stay, so cards keep reading as physical objects. The catalog stays literal and modern; there is no typewriter type and no paper texture.",
+    "overview": "The interface is a library catalog cabinet. A navy drawer front runs across the top with a brass label holder carrying the product name; below it, on a warm cream ground, the visitor's question and the answer sit on the left and the catalog cards that answer drew on sit in a rail on the right. Every claim in an answer carries a small numbered mark, and pressing it pulls the matching card out of the rail. The card is where trust is earned: call number in mono, section, the exact sentence highlighted on ruled card stock, a link to the source.\n\nDensity is moderate and reading-first: one typeface family (Atkinson Hyperlegible) at a generous 17px body, hairlines rather than boxes to divide fields, and a single red top rule that identifies card stock at a glance. Light and dark are both first-class. Dark is the cabinet room with the lights down: the ground darkens, but the steel header, the brass and paper plate and the light card stock all stay, so cards keep reading as physical objects. The catalog stays literal and modern; there is no typewriter type and no paper texture.",
     "keyCharacteristics": [
       "Steel drawer-front header with a brass-bordered paper label plate.",
       "Answers on white paper panels; sources on off-white card stock with a 4px red top rule.",

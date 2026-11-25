@@ -2,31 +2,31 @@
 name: Handbook Assistant
 description: A library card catalog for a handbook RAG demo; every answer is filed to numbered cards the visitor can pull and check.
 colors:
-  steel: "#2f3a36"
-  steel-raised: "#3d4a45"
-  steel-ink: "#eef0ea"
-  steel-ink-muted: "#c3cbc4"
+  steel: "#1f2d4a"
+  steel-raised: "#2c3d5f"
+  steel-ink: "#f3f1ea"
+  steel-ink-muted: "#c5cbd8"
   brass: "#b8924a"
   brass-light: "#ecd39d"
   catalog-red: "#b03524"
   catalog-red-dark: "#a63322"
-  ground: "#eceee8"
-  ground-dark: "#151a18"
+  ground: "#f4f1ea"
+  ground-dark: "#10141d"
   ground-ink: "#1d2533"
-  ground-ink-dark: "#e9ece5"
+  ground-ink-dark: "#ebe8e0"
   ground-ink-muted: "#4a5462"
-  ground-ink-muted-dark: "#b4bcb3"
-  ground-hair: "#c9cbc2"
-  ground-hair-dark: "#39433f"
-  card-stock: "#f6f6f1"
-  card-stock-dark: "#dddfd5"
+  ground-ink-muted-dark: "#b9bdc7"
+  ground-hair: "#d8d2c4"
+  ground-hair-dark: "#2c3444"
+  card-stock: "#fbf9f4"
+  card-stock-dark: "#e6e2d8"
   paper: "#ffffff"
-  paper-dark: "#e5e6de"
+  paper-dark: "#eeebe3"
   ink: "#1d2533"
   ink-muted: "#4a5462"
-  ink-muted-dark: "#414b58"
-  hair: "#c9cbc2"
-  hair-dark: "#b7b9b0"
+  ink-muted-dark: "#474f5c"
+  hair: "#d8d2c4"
+  hair-dark: "#c4bfb3"
   ruled-blue: "#dbe3ef"
   ruled-blue-dark: "#c7d0dd"
   highlight: "#f1e2ae"
@@ -151,7 +151,7 @@ components:
 
 **Creative North Star: "The Card Catalog"**
 
-The interface is a library catalog cabinet. A steel-green drawer front runs across the top with a brass label holder carrying the product name; below it, on a pale cabinet ground, the visitor's question and the answer sit on the left and the catalog cards that answer drew on sit in a rail on the right. Every claim in an answer carries a small numbered mark, and pressing it pulls the matching card out of the rail. The card is where trust is earned: call number in mono, section, the exact sentence highlighted on ruled card stock, a link to the source.
+The interface is a library catalog cabinet. A navy drawer front runs across the top with a brass label holder carrying the product name; below it, on a warm cream ground, the visitor's question and the answer sit on the left and the catalog cards that answer drew on sit in a rail on the right. Every claim in an answer carries a small numbered mark, and pressing it pulls the matching card out of the rail. The card is where trust is earned: call number in mono, section, the exact sentence highlighted on ruled card stock, a link to the source.
 
 Density is moderate and reading-first: one typeface family (Atkinson Hyperlegible) at a generous 17px body, hairlines rather than boxes to divide fields, and a single red top rule that identifies card stock at a glance. Light and dark are both first-class. Dark is the cabinet room with the lights down: the ground darkens, but the steel header, the brass and paper plate and the light card stock all stay, so cards keep reading as physical objects. The catalog stays literal and modern; there is no typewriter type and no paper texture.
 
@@ -164,7 +164,7 @@ Density is moderate and reading-first: one typeface family (Atkinson Hyperlegibl
 
 ## Colors
 
-A muted institutional palette: steel green, brass and catalog red over neutral stock, with blue reserved for links and focus.
+A muted institutional palette: navy steel, brass and catalog red over warm cream stock, with blue reserved for links and focus.
 
 ### Primary
 - **Drawer Steel** (steel): the sticky header, the Search button and the composer field's border. The cabinet itself. Its raised tone (steel-raised) is only the hover fill for ghost buttons on steel.

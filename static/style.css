@@ -4,23 +4,23 @@
 
 /* Card catalog: steel cabinet, brass label holder, card stock with a red top rule. */
 :root {
-  --ground: #eceee8;
+  --ground: #f4f1ea;
   --ground-ink: #1d2533;      /* text set directly on the ground */
   --ground-ink-2: #4a5462;
-  --hair-ground: #c9cbc2;
+  --hair-ground: #d8d2c4;
   --link: #2c5aa0;            /* links on card stock and paper */
-  --card: #f6f6f1;
+  --card: #fbf9f4;
   --paper: #ffffff;
   --ink: #1d2533;
   --ink-2: #4a5462;
-  --steel: #2f3a36;
-  --steel-2: #3d4a45;
-  --steel-ink: #eef0ea;
-  --steel-ink-2: #c3cbc4;
+  --steel: #1f2d4a;
+  --steel-2: #2c3d5f;
+  --steel-ink: #f3f1ea;
+  --steel-ink-2: #c5cbd8;
   --brass: #b8924a;
   --rule: #b03524;
   --ruled: #dbe3ef;
-  --hair: #c9cbc2;
+  --hair: #d8d2c4;
   --mark: #f1e2ae;
   --focus: #2c5aa0;
   --shadow: 0 1px 2px rgb(29 37 51 / 8%), 0 3px 10px rgb(29 37 51 / 6%);
@@ -31,16 +31,16 @@
 /* Dark: the cabinet room with the lights down. The steel, brass and card stock stay; only the ground darkens. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --ground: #151a18;
-    --ground-ink: #e9ece5;
-    --ground-ink-2: #b4bcb3;
-    --hair-ground: #39433f;
-    --card: #dddfd5;
-    --paper: #e5e6de;
-    --ink-2: #414b58;
+    --ground: #10141d;
+    --ground-ink: #ebe8e0;
+    --ground-ink-2: #b9bdc7;
+    --hair-ground: #2c3444;
+    --card: #e6e2d8;
+    --paper: #eeebe3;
+    --ink-2: #474f5c;
     --rule: #a63322;
     --ruled: #c7d0dd;
-    --hair: #b7b9b0;
+    --hair: #c4bfb3;
     --focus: #8fb3ff;
     --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 3px 10px rgb(0 0 0 / 30%);
     --lift: 0 6px 14px rgb(0 0 0 / 50%), 0 16px 32px rgb(0 0 0 / 40%);

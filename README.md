@@ -15,6 +15,8 @@ A chatbot that answers questions about GitLab's people policies from 48 pages of
 
 **Live demo:** _link added after deploying to Hugging Face Spaces_
 
+[**Watch the 50-second demo (MP4)**](demo/rag-chatbot-demo.mp4): a real answer with numbered citations, a pulled source card with the supporting sentence highlighted, a refusal for an out-of-scope question, and the published eval results. Every screen is from a real run.
+
 ## Results
 
 <!-- RESULTS:START -->
