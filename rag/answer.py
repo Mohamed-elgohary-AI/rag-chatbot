@@ -47,17 +47,29 @@ def format_sources(chunks: list[dict]) -> str:
     )
 
 
+CITE_GROUP = r"\[(\d+(?:\s*[,–-]\s*\d+)*)\]"  # [2], [1, 3], [1-3], [2–4]
+
+
+def expand(group: str) -> list[int]:
+    """'1, 3' -> [1, 3]; '1-3' -> [1, 2, 3]."""
+    nums = []
+    for part in group.split(","):
+        a, _, b = re.sub(r"\s", "", part).replace("–", "-").partition("-")
+        nums += list(range(int(a), min(int(b), int(a) + 20) + 1)) if b else [int(a)]  # cap: a typo like [1-999] stays small
+    return nums
+
+
 def normalize_citations(text: str) -> str:
-    """gpt-oss sometimes cites in its native style, 【1†L1-L3】; turn that into [1]."""
-    return re.sub(r"【(\d+)(?:†[^】]*)?】", r"[\1]", text)
+    """Rewrites every citation as single [n] marks: gpt-oss's native 【1†L1-L3】, and groups like [1, 3] or [1-3]."""
+    text = re.sub(r"【(\d+)(?:†[^】]*)?】", r"[\1]", text)
+    return re.sub(CITE_GROUP, lambda m: "".join(f"[{n}]" for n in expand(m.group(1))), text)
 
 
 def cited_numbers(text: str, n_sources: int) -> list[int]:
-    """Source numbers cited as [n] (also [1, 3] or [1][3]), in order of first use, ignoring invalid ones."""
+    """Source numbers cited as [n] (also [1, 3], [1-3] or [1][3]), in order of first use, ignoring invalid ones."""
     found = []
-    for group in re.findall(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\]", text):
-        for num in re.split(r"\s*[,–-]\s*", group):
-            n = int(num)
+    for group in re.findall(CITE_GROUP, text):
+        for n in expand(group):
             if 1 <= n <= n_sources and n not in found:
                 found.append(n)
     return found

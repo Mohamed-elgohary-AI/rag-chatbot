@@ -37,15 +37,18 @@ class Ask(BaseModel):
 
 
 def client_ip(request: Request) -> str:
-    # Hugging Face Spaces and most hosts put the visitor's address first in X-Forwarded-For.
+    # The host's proxy appends the real address at the END of X-Forwarded-For; earlier entries come from
+    # the visitor and can be faked to dodge the per-visitor limit.
     forwarded = request.headers.get("x-forwarded-for", "")
-    return forwarded.split(",")[0].strip() or (request.client.host if request.client else "unknown")
+    return forwarded.split(",")[-1].strip() or (request.client.host if request.client else "unknown")
 
 
 def check_limits(ip: str) -> None:
     now, today = time.time(), time.strftime("%Y-%m-%d")
     if daily["day"] != today:
         daily.update(day=today, count=0)
+        for old in [k for k, q in hits.items() if not q or now - q[-1] > PER_IP_WINDOW]:
+            del hits[old]  # forget visitors with nothing left in the window, so `hits` doesn't grow forever
     if daily["count"] >= DAILY_LIMIT:
         raise HTTPException(429, "The demo has reached its daily limit. Please try again tomorrow.")
     q = hits[ip]

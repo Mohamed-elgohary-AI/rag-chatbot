@@ -37,3 +37,16 @@ def test_refusal_detection():
     assert is_refusal(REFUSAL)
     assert is_refusal("I do not know based on the handbook.")
     assert not is_refusal("You get 16 weeks of parental leave [1].")
+
+
+def test_citation_ranges_expand_to_every_source():
+    assert cited_numbers("See [1-3] and [2–4].", 6) == [1, 2, 3, 4]
+    assert normalize_citations("Yes [1-3], also [2, 5].") == "Yes [1][2][3], also [2][5]."
+
+
+def test_client_ip_uses_the_proxy_added_address_not_the_visitor_supplied_one():
+    from types import SimpleNamespace
+    from server import client_ip
+    req = SimpleNamespace(headers={"x-forwarded-for": "6.6.6.6, 203.0.113.7"}, client=None)
+    assert client_ip(req) == "203.0.113.7"
+    assert client_ip(SimpleNamespace(headers={}, client=SimpleNamespace(host="10.0.0.1"))) == "10.0.0.1"

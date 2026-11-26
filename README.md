@@ -1,14 +1,3 @@
----
-title: GitLab Handbook Assistant
-emoji: 📘
-colorFrom: purple
-colorTo: indigo
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
-
 # GitLab Handbook Assistant: RAG with measured answers
 
 A chatbot that answers questions about GitLab's people policies from 48 pages of the public [GitLab Handbook](https://handbook.gitlab.com/handbook/), **cites the exact section** behind every claim, and **says "I don't know" when the handbook doesn't cover the question**. It's tested on a 51-question set written before any tuning, with every verdict checked by hand.
@@ -39,7 +28,7 @@ How these were measured:
 What I learned from the failures:
 - **Hybrid search can surface a near-duplicate policy.** For "daily meal limit when traveling", keyword search pulled the *Sponsored Travel* per-diem rules (travel billed to customers), and the model answered from those instead of the $120/day rule. Part of the cause is chunking: the short "Meals" section was merged into the chunk before it, so the $120 rule sits under the heading "Self Stay Incentive Policy". Fixing that is the next improvement, re-measured on the same set.
 - **LLM judges need the evidence.** My first judge only saw a short gold answer and marked correct, more detailed answers as wrong. Giving it the cited passages fixed most of that, and hand review caught a judge bug where passages were renumbered.
-- **Free-tier limits shape the design.** Groq's free tier allows 200k tokens a day for gpt-oss-120b, about 60 answers. The eval can't run in one day, and the live demo falls back to `gpt-oss-20b` (separate quota) and says so on the page.
+- **Free-tier limits shape the design.** Groq's free tier allows 200k tokens a day for gpt-oss-120b, about 60 answers. The eval can't run in one day, and the app falls back to `gpt-oss-20b` (separate quota) and says so on the page.
 
 ## How it works
 
@@ -75,13 +64,6 @@ uv run python eval/run_eval.py run final
 uv run python eval/run_eval.py report   # writes eval/results/results.md
 uv run pytest
 ```
-
-## Deploy (Hugging Face Spaces, free)
-
-1. Create a Space with the **Docker** SDK and push this repository to it (the YAML block at the top of this README configures it).
-2. In the Space settings, add a secret `GROQ_API_KEY`.
-
-The image downloads the embedding model during the build, so the first visitor doesn't wait.
 
 ## Project layout
 
